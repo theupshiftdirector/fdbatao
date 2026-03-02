@@ -1221,6 +1221,52 @@ function generateAffiliatePage(pageData) {
     </div>
 </section>`;
 
+  } else if (pageData.contentType === 'guide') {
+    // --- Guide / Blog content page ---
+    const guideContentHTML = (pageData.guideContent || []).map(block => {
+      if (block.type === 'h2') return `<h2>${block.text}</h2>`;
+      if (block.type === 'h3') return `<h3>${block.text}</h3>`;
+      if (block.type === 'p') return `<p>${block.text}</p>`;
+      if (block.type === 'list') {
+        const items = block.items.map(item => `<li>${item}</li>`).join('');
+        return `<${block.ordered ? 'ol' : 'ul'}>${items}</${block.ordered ? 'ol' : 'ul'}>`;
+      }
+      if (block.type === 'table') {
+        const ths = block.headers.map(h => `<th>${h}</th>`).join('');
+        const trs = block.rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
+        return `<div class="table-container"><table class="comparison-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table></div>`;
+      }
+      return '';
+    }).join('\n');
+
+    const guideCtaLink = pageData.ctaLink || '/';
+    const guideCtaText = pageData.ctaText || 'Calculate FD Returns';
+
+    content = `
+<section class="page-hero">
+    <h1><span class="hl">${heroTitle}</span></h1>
+    <p>${heroSub}</p>
+    <div class="updated">Updated: ${new Date().toLocaleString('en-IN', { month: 'long', year: 'numeric' })}</div>
+</section>
+
+<!-- Ad: Below Hero -->
+<div style="max-width:1200px;margin:0 auto 24px;padding:0 24px;text-align:center;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8235932614579966" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="info-section">
+    ${guideContentHTML}
+</section>
+
+<section class="calc-cta">
+    <div class="calc-cta-box">
+        <h3>${guideCtaText}</h3>
+        <p>Use our free FD calculator to see your exact maturity amount, interest earned, and year-wise growth schedule.</p>
+        <a href="${guideCtaLink}" class="calc-cta-btn">${guideCtaText} \u2192</a>
+    </div>
+</section>`;
+
   } else if (pageType === 'comparison-article') {
     // --- FD vs Debt Mutual Fund page ---
     const factors = comparisonFactors || [];

@@ -89,6 +89,287 @@
         { "q": "Can I lose money in debt mutual funds?", "a": "Yes, though rare, you can face losses in debt funds due to interest rate changes (when rates rise, bond prices fall) or credit default events. However, overnight funds, liquid funds, and government bond funds carry very low risk. FDs never give negative returns." },
         { "q": "Should I invest in both FD and debt mutual funds?", "a": "Yes, diversification is recommended. Keep your emergency fund and short-term goals in FDs for safety and guaranteed returns. Use debt mutual funds for medium-term goals (1-3 years) where slightly higher returns and better liquidity are beneficial. Consider your overall asset allocation strategy." }
       ]
+    },
+    {
+      "slug": "fd-interest-calculation-explained",
+      "title": "How FD Interest is Calculated — Simple vs Compound (2026)",
+      "description": "Learn how FD interest is calculated in 2026. Understand simple vs compound interest, quarterly compounding, cumulative vs non-cumulative FD, and TDS rules with examples.",
+      "keywords": "fd interest calculation, how fd interest is calculated, simple vs compound interest fd, quarterly compounding fd, cumulative fd, non cumulative fd, tds on fd interest",
+      "heroTitle": "FD Interest Calculation Explained",
+      "heroSub": "Understand exactly how banks calculate your Fixed Deposit interest. Simple vs compound, quarterly compounding, and TDS — all explained with examples.",
+      "contentType": "guide",
+      "ctaText": "Calculate FD Returns",
+      "ctaLink": "/",
+      "guideContent": [
+        {
+          "type": "h2",
+          "text": "Simple Interest vs Compound Interest on FD"
+        },
+        {
+          "type": "p",
+          "text": "Banks can calculate FD interest using either simple interest or compound interest methods. Understanding the difference is crucial because it directly affects how much you earn from your Fixed Deposit."
+        },
+        {
+          "type": "p",
+          "text": "Simple Interest is calculated only on the original principal amount. The formula is: Simple Interest = Principal x Rate x Time / 100. If you deposit Rs 5,00,000 at 7% for 3 years with simple interest, you earn Rs 5,00,000 x 7 x 3 / 100 = Rs 1,05,000 in interest. Your maturity amount would be Rs 6,05,000."
+        },
+        {
+          "type": "p",
+          "text": "Compound Interest is calculated on the principal plus any previously earned interest. The formula is: Maturity = Principal x (1 + Rate/n)^(n x Time), where n is the compounding frequency per year. With compound interest, you earn interest on your interest, resulting in a higher maturity amount."
+        },
+        {
+          "type": "h2",
+          "text": "How Quarterly Compounding Works"
+        },
+        {
+          "type": "p",
+          "text": "Most banks in India use quarterly compounding for Fixed Deposits. This means the interest is calculated and added to your principal every 3 months (4 times a year). Each quarter, the interest earned in the previous quarter becomes part of the principal for the next quarter's calculation."
+        },
+        {
+          "type": "p",
+          "text": "With quarterly compounding, the effective annual rate is slightly higher than the stated rate. For example, a stated rate of 7% per annum with quarterly compounding gives an effective annual yield of approximately 7.19%. This is because interest compounds four times during the year."
+        },
+        {
+          "type": "h3",
+          "text": "Quarterly Compounding Step-by-Step"
+        },
+        {
+          "type": "p",
+          "text": "Let us see how quarterly compounding works with a Rs 5,00,000 FD at 7% for 1 year:"
+        },
+        {
+          "type": "table",
+          "headers": ["Quarter", "Opening Balance", "Interest (7%/4 = 1.75%)", "Closing Balance"],
+          "rows": [
+            ["Q1 (Jan-Mar)", "Rs 5,00,000", "Rs 8,750", "Rs 5,08,750"],
+            ["Q2 (Apr-Jun)", "Rs 5,08,750", "Rs 8,903", "Rs 5,17,653"],
+            ["Q3 (Jul-Sep)", "Rs 5,17,653", "Rs 9,059", "Rs 5,26,712"],
+            ["Q4 (Oct-Dec)", "Rs 5,26,712", "Rs 9,217", "Rs 5,35,929"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Total interest earned with quarterly compounding: Rs 35,929. With simple interest, you would have earned only Rs 35,000 (Rs 5,00,000 x 7%). The extra Rs 929 comes from compounding — earning interest on the interest added each quarter."
+        },
+        {
+          "type": "h2",
+          "text": "Detailed Example: Rs 5 Lakh FD for 3 Years at 7%"
+        },
+        {
+          "type": "p",
+          "text": "Let us compare both methods side by side for a Rs 5,00,000 Fixed Deposit at 7% annual interest for 3 years."
+        },
+        {
+          "type": "table",
+          "headers": ["Method", "Principal", "Interest Earned", "Maturity Amount"],
+          "rows": [
+            ["Simple Interest", "Rs 5,00,000", "Rs 1,05,000", "Rs 6,05,000"],
+            ["Quarterly Compounding", "Rs 5,00,000", "Rs 1,16,147", "Rs 6,16,147"],
+            ["Monthly Compounding", "Rs 5,00,000", "Rs 1,16,765", "Rs 6,16,765"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "With quarterly compounding, you earn Rs 11,147 more than simple interest over 3 years — that is an extra 10.6% on the interest itself. Monthly compounding gives you a further Rs 618 more than quarterly, though the difference between monthly and quarterly is marginal."
+        },
+        {
+          "type": "h2",
+          "text": "Cumulative vs Non-Cumulative FD"
+        },
+        {
+          "type": "p",
+          "text": "When booking a Fixed Deposit, you typically choose between cumulative and non-cumulative options. This choice determines when and how you receive the interest."
+        },
+        {
+          "type": "h3",
+          "text": "Cumulative FD"
+        },
+        {
+          "type": "p",
+          "text": "In a cumulative FD, the interest is compounded quarterly and paid out only at maturity along with the principal. This is ideal for investors who do not need regular income and want maximum returns. The interest earns interest (compounding effect), resulting in a higher maturity amount. Best suited for salaried individuals, young investors, and those with long-term savings goals."
+        },
+        {
+          "type": "h3",
+          "text": "Non-Cumulative FD"
+        },
+        {
+          "type": "p",
+          "text": "In a non-cumulative FD, the interest is paid out at regular intervals — monthly, quarterly, half-yearly, or annually — directly to your bank account. Since the interest is not reinvested, there is no compounding benefit. The effective return is slightly lower than a cumulative FD. This option is ideal for retirees and senior citizens who need regular income from their FD investments."
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "Cumulative FD", "Non-Cumulative FD"],
+          "rows": [
+            ["Interest Payout", "At maturity only", "Monthly / Quarterly / Annually"],
+            ["Compounding Benefit", "Yes (higher effective return)", "No (simple interest equivalent)"],
+            ["Best For", "Wealth growth, long-term saving", "Regular income, retirement"],
+            ["Maturity for Rs 5L at 7% for 3Y", "Rs 6,16,147", "Rs 6,05,000 (Rs 5L + interest paid out)"],
+            ["Effective Yield", "7.19% (with quarterly compounding)", "7.00% (stated rate)"]
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "TDS on FD Interest — What You Need to Know"
+        },
+        {
+          "type": "p",
+          "text": "Tax Deducted at Source (TDS) is applicable on FD interest when the total interest earned from all FDs with a bank exceeds Rs 40,000 in a financial year (Rs 50,000 for senior citizens aged 60+). The TDS rate is 10% if you have provided your PAN; otherwise, it is 20%."
+        },
+        {
+          "type": "list",
+          "items": [
+            "TDS threshold: Rs 40,000/year for general citizens, Rs 50,000/year for senior citizens (across all FDs in the same bank).",
+            "TDS rate: 10% with PAN, 20% without PAN.",
+            "TDS is deducted on accrued interest, not just on payout — even in cumulative FDs, TDS is deducted annually on the interest that has been added to your FD.",
+            "To avoid TDS, submit Form 15G (below 60 years) or Form 15H (60+ years) at the beginning of each financial year if your total income is below the taxable limit.",
+            "FD interest is fully taxable as per your income tax slab. TDS is just an advance tax; you still need to report FD interest in your ITR and pay any additional tax due."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Important: Even if TDS is deducted at 10%, your actual tax liability on FD interest could be higher (20% or 30% depending on your slab). You must declare all FD interest income in your annual tax return and pay the balance tax."
+        }
+      ],
+      "faqs": [
+        { "q": "Do all banks use compound interest for FD?", "a": "Most banks in India use quarterly compounding for cumulative FDs. However, non-cumulative FDs effectively work on simple interest since the interest is paid out periodically and not reinvested. Some banks and NBFCs may compound monthly or half-yearly. Always check the interest calculation method before booking your FD." },
+        { "q": "What is the difference between FD interest rate and effective yield?", "a": "The stated FD interest rate is the nominal annual rate. The effective yield is the actual annual return after considering compounding. For example, a 7% FD rate with quarterly compounding gives an effective yield of approximately 7.19%. The effective yield is always higher than the stated rate when compounding is involved." },
+        { "q": "How can I avoid TDS on my FD interest?", "a": "If your total annual income is below the basic exemption limit (Rs 2.5 lakh for general citizens, Rs 3 lakh for senior citizens under old regime), you can submit Form 15G (for those below 60) or Form 15H (for senior citizens) to your bank at the start of each financial year. This prevents the bank from deducting TDS on your FD interest." },
+        { "q": "Is FD interest calculated daily or quarterly?", "a": "For cumulative FDs, most banks calculate interest on a quarterly compounding basis — meaning interest is added to the principal every 3 months. The daily calculation method is more common for savings accounts. For non-cumulative FDs, interest is calculated on the principal and paid out at the chosen frequency (monthly, quarterly, etc.)." },
+        { "q": "Which gives more returns — cumulative or non-cumulative FD?", "a": "Cumulative FD always gives higher total returns because the interest is reinvested and earns further interest (compounding effect). For a Rs 5 lakh FD at 7% for 3 years, a cumulative FD gives Rs 6,16,147 at maturity, while a non-cumulative FD pays out total interest of Rs 1,05,000, making the effective maturity Rs 6,05,000. That is Rs 11,147 less." }
+      ]
+    },
+    {
+      "slug": "senior-citizen-fd-guide",
+      "title": "Senior Citizen FD Rates 2026 — Extra 0.50% Interest Guide",
+      "description": "Complete guide to Senior Citizen FD rates in 2026. Learn about extra 0.25-0.75% interest benefit, super senior citizen rates, best banks, tax implications, and FD vs SCSS comparison.",
+      "keywords": "senior citizen fd rates 2026, senior citizen fixed deposit, extra interest for seniors, super senior citizen fd rate, best bank fd for senior citizen, senior citizen fd tax benefit",
+      "heroTitle": "Senior Citizen FD Rates Guide",
+      "heroSub": "Senior citizens get 0.25% to 0.75% extra interest on Fixed Deposits. Find out which banks offer the best rates and how to maximise your returns.",
+      "contentType": "guide",
+      "ctaText": "Compare Senior Citizen FD Rates",
+      "ctaLink": "/",
+      "guideContent": [
+        {
+          "type": "h2",
+          "text": "Senior Citizen FD Interest Benefit — How Much Extra?"
+        },
+        {
+          "type": "p",
+          "text": "Banks and financial institutions in India offer higher FD interest rates to senior citizens (aged 60 years and above) as a way to support retirees who depend on FD income. The additional interest typically ranges from 0.25% to 0.75% above the standard rate, depending on the bank and deposit tenure."
+        },
+        {
+          "type": "p",
+          "text": "For example, if a bank offers 7.00% to general citizens on a 1-year FD, senior citizens may receive 7.50% for the same tenure. On a deposit of Rs 10 lakh, this 0.50% extra translates to Rs 5,000 additional interest per year. Over a 5-year FD, the extra interest adds up to Rs 25,000 or more (with compounding)."
+        },
+        {
+          "type": "h3",
+          "text": "Typical Senior Citizen Extra Interest by Bank Type"
+        },
+        {
+          "type": "table",
+          "headers": ["Bank Type", "General Rate (1Y)", "Senior Rate (1Y)", "Extra Interest"],
+          "rows": [
+            ["Public Sector Banks (SBI, PNB, BOB)", "6.80-7.25%", "7.30-7.75%", "+0.50%"],
+            ["Private Banks (HDFC, ICICI, Axis)", "7.00-7.25%", "7.50-7.75%", "+0.50%"],
+            ["Small Finance Banks", "7.50-8.25%", "8.00-8.75%", "+0.50%"],
+            ["NBFCs (Bajaj, Shriram, Mahindra)", "7.40-7.75%", "7.65-8.25%", "+0.25-0.50%"],
+            ["Post Office", "7.50% (5Y)", "7.50% (5Y)", "No extra (same rate)"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Note: Post Office FDs do not offer an additional rate for senior citizens. However, the Post Office Senior Citizens Savings Scheme (SCSS) offers 8.2% with quarterly payouts, which is a separate and better option for seniors."
+        },
+        {
+          "type": "h2",
+          "text": "Super Senior Citizen FD Rates"
+        },
+        {
+          "type": "p",
+          "text": "Some banks have introduced a 'Super Senior Citizen' category for depositors aged 80 years and above. These customers receive an additional 0.25% to 0.50% over and above the senior citizen rate, making it the highest FD rate tier available."
+        },
+        {
+          "type": "p",
+          "text": "For instance, SBI offers an extra 0.10% for super senior citizens (80+) over the senior citizen rate. HDFC Bank and ICICI Bank offer 0.25% extra for super seniors. Kotak Mahindra Bank provides an additional 0.25% for those aged 80+, bringing the total premium to 0.75% above general rates."
+        },
+        {
+          "type": "table",
+          "headers": ["Category", "Age", "Typical Rate Premium", "Example Rate (at 7% base)"],
+          "rows": [
+            ["General Citizen", "Below 60", "Base rate", "7.00%"],
+            ["Senior Citizen", "60-79 years", "+0.25% to +0.50%", "7.50%"],
+            ["Super Senior Citizen", "80+ years", "+0.50% to +0.75%", "7.75%"]
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Best Banks for Senior Citizen FD in 2026"
+        },
+        {
+          "type": "p",
+          "text": "Choosing the right bank for your FD as a senior citizen involves balancing interest rate, safety, and convenience. Here are the top options for 2026:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "SBI — Most trusted with the largest branch network. Senior citizen rates range from 7.00% to 7.75% depending on tenure. DICGC insured up to Rs 5 lakh. Special Amrit Vrishti scheme available.",
+            "HDFC Bank — Among the highest private bank senior rates at 7.00-7.75%. Super senior citizens get an additional 0.25%. Strong digital banking for easy FD management.",
+            "Kotak Mahindra Bank — Competitive senior rates of 7.10-7.60% with 0.50% senior premium. One of the best for short-term (1-2 year) senior FDs.",
+            "IDFC First Bank — Offers 7.00-7.50% for seniors with excellent digital experience. No physical branch visits needed for FD booking.",
+            "Post Office (SCSS) — While Post Office FDs do not give senior extra rate, the Senior Citizens Savings Scheme (SCSS) at 8.2% is the best government-backed option with quarterly payouts."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Tax Implications for Senior Citizens on FD Interest"
+        },
+        {
+          "type": "p",
+          "text": "FD interest is fully taxable for senior citizens as per their income tax slab. However, senior citizens enjoy several tax benefits that make FDs more attractive:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Higher TDS Threshold: TDS on FD interest is deducted only when the annual interest exceeds Rs 50,000 (compared to Rs 40,000 for non-seniors). This means FDs up to approximately Rs 7-8 lakh may not attract TDS for seniors.",
+            "Section 80TTB Deduction: Senior citizens can claim a deduction of up to Rs 50,000 on interest income from FDs, savings accounts, and post office deposits under Section 80TTB (old tax regime only). This effectively makes the first Rs 50,000 of interest income tax-free.",
+            "Form 15H: Senior citizens whose total income is below the taxable limit can submit Form 15H to their bank to avoid TDS deduction entirely.",
+            "Higher Basic Exemption: Under the old tax regime, the basic exemption limit is Rs 3,00,000 for senior citizens (60-79) and Rs 5,00,000 for super senior citizens (80+)."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "FD vs SCSS — Which is Better for Senior Citizens?"
+        },
+        {
+          "type": "p",
+          "text": "The Senior Citizens Savings Scheme (SCSS) and Fixed Deposits are both popular among retirees. Here is a detailed comparison to help you choose:"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "Senior Citizen FD", "SCSS"],
+          "rows": [
+            ["Interest Rate", "6.50-7.75% (varies by bank)", "8.2% (government-set)"],
+            ["Tenure", "Flexible (7 days to 10 years)", "5 years (extendable by 3 years)"],
+            ["Maximum Limit", "No upper limit", "Rs 30 lakh per individual"],
+            ["Interest Payout", "Monthly, quarterly, or at maturity", "Quarterly only"],
+            ["Tax Benefit on Investment", "80C for 5-year tax-saving FD only", "Qualifies for Section 80C deduction"],
+            ["Safety", "DICGC insured up to Rs 5 lakh (banks)", "Government-backed (sovereign guarantee)"],
+            ["Premature Withdrawal", "Allowed with penalty (0.5-1%)", "Allowed after 1 year with penalty"],
+            ["Ideal For", "Large deposits, flexible tenure", "Regular quarterly income up to Rs 30 lakh"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "For most senior citizens, the ideal strategy is to invest up to Rs 30 lakh in SCSS for the higher rate and quarterly income, and place any additional funds in bank FDs for flexibility and safety. Spreading FDs across multiple banks ensures DICGC coverage for deposits exceeding Rs 5 lakh."
+        }
+      ],
+      "faqs": [
+        { "q": "At what age do you get extra FD interest?", "a": "You become eligible for the senior citizen FD rate when you turn 60 years old. You need to provide age proof (Aadhaar, PAN, or passport) to the bank. Some banks have introduced a 'super senior citizen' category at age 80+ with an additional 0.25% premium. The higher rate applies from the date you open the FD — existing FDs booked before turning 60 will not be automatically upgraded." },
+        { "q": "Can NRI senior citizens get extra FD rates?", "a": "No, the senior citizen FD rate benefit is generally available only to Resident Indians. NRI FDs (NRE and NRO) have their own rate structures and typically do not offer additional interest for seniors. However, if an NRI returns to India and converts their NRO FD to a domestic FD, they may become eligible for the senior citizen premium." },
+        { "q": "Which bank gives the highest FD rate for senior citizens?", "a": "Among major banks, HDFC Bank, Kotak Mahindra Bank, and IDFC First Bank typically offer the highest senior citizen FD rates at 7.50-7.75% for 1-year tenure. Small Finance Banks like Unity, Equitas, and AU offer even higher rates at 8.00-8.75%. However, NBFC FDs and Small Finance Bank FDs carry slightly higher risk than large bank FDs." },
+        { "q": "Is TDS applicable on senior citizen FD interest?", "a": "Yes, TDS is applicable on senior citizen FD interest, but the threshold is higher — Rs 50,000 per year per bank (compared to Rs 40,000 for non-seniors). If your total income is below the taxable limit, you can submit Form 15H to avoid TDS. Also, under Section 80TTB, seniors can claim up to Rs 50,000 deduction on total interest income." },
+        { "q": "Can I invest more than Rs 30 lakh in SCSS?", "a": "No, the maximum limit for SCSS is Rs 30 lakh per individual (increased from Rs 15 lakh in Budget 2023). If you have more than Rs 30 lakh to invest, you should put Rs 30 lakh in SCSS for the 8.2% rate and invest the remaining in bank FDs. A joint account with spouse does not increase the limit — each individual can invest up to Rs 30 lakh in their own SCSS account." }
+      ]
     }
   ]
 }
