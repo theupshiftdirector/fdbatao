@@ -370,6 +370,416 @@
         { "q": "Is TDS applicable on senior citizen FD interest?", "a": "Yes, TDS is applicable on senior citizen FD interest, but the threshold is higher — Rs 50,000 per year per bank (compared to Rs 40,000 for non-seniors). If your total income is below the taxable limit, you can submit Form 15H to avoid TDS. Also, under Section 80TTB, seniors can claim up to Rs 50,000 deduction on total interest income." },
         { "q": "Can I invest more than Rs 30 lakh in SCSS?", "a": "No, the maximum limit for SCSS is Rs 30 lakh per individual (increased from Rs 15 lakh in Budget 2023). If you have more than Rs 30 lakh to invest, you should put Rs 30 lakh in SCSS for the 8.2% rate and invest the remaining in bank FDs. A joint account with spouse does not increase the limit — each individual can invest up to Rs 30 lakh in their own SCSS account." }
       ]
+    },
+    {
+      "slug": "fd-vs-rd",
+      "title": "FD vs RD — Which Gives Better Returns? (2026 Comparison)",
+      "description": "Compare Fixed Deposit (FD) vs Recurring Deposit (RD) in 2026. Interest rate comparison, flexibility, penalty, tax treatment, and when each option is better for you.",
+      "keywords": "fd vs rd, fixed deposit vs recurring deposit, fd vs rd which is better, fd rd comparison 2026, fd or rd for savings, rd vs fd interest rate",
+      "heroTitle": "FD vs RD — Which is Better?",
+      "heroSub": "Fixed Deposit or Recurring Deposit? Compare returns, flexibility, tax treatment, and find out which savings option suits your financial goals in 2026.",
+      "contentType": "guide",
+      "ctaText": "Calculate FD Returns",
+      "ctaLink": "/",
+      "guideContent": [
+        {
+          "type": "h2",
+          "text": "What is the Difference Between FD and RD?"
+        },
+        {
+          "type": "p",
+          "text": "A Fixed Deposit (FD) requires you to invest a lump sum amount for a fixed period, while a Recurring Deposit (RD) lets you deposit a fixed amount every month for a chosen tenure. Both are offered by banks, post offices, and NBFCs, and both provide guaranteed returns. However, the way interest is calculated differs, leading to different maturity amounts."
+        },
+        {
+          "type": "p",
+          "text": "In an FD, the entire principal earns interest from day one. In an RD, only the first monthly instalment earns interest for the full tenure — each subsequent instalment earns interest for progressively shorter periods. This fundamental difference means that an FD always gives higher total returns than an RD at the same interest rate and tenure."
+        },
+        {
+          "type": "h2",
+          "text": "Interest Rate Comparison — FD vs RD"
+        },
+        {
+          "type": "p",
+          "text": "Most banks offer the same or very similar interest rates for FDs and RDs of the same tenure. However, some banks offer slightly lower rates on RDs. Here is a comparison of current rates at major banks:"
+        },
+        {
+          "type": "table",
+          "headers": ["Bank", "FD Rate (1 Year)", "RD Rate (1 Year)", "Difference"],
+          "rows": [
+            ["SBI", "6.80%", "6.80%", "Same"],
+            ["HDFC Bank", "6.60%", "6.60%", "Same"],
+            ["ICICI Bank", "6.70%", "6.70%", "Same"],
+            ["Kotak Mahindra", "7.10%", "6.50%", "FD higher"],
+            ["Post Office", "6.90%", "6.70%", "FD higher"],
+            ["Axis Bank", "6.70%", "6.70%", "Same"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "While rates may be the same, the effective return on an FD is always higher because the entire principal compounds from the start. An RD builds up gradually, so only a portion of the total investment earns full-tenure interest."
+        },
+        {
+          "type": "h2",
+          "text": "Returns Comparison — Example with Rs 1,20,000"
+        },
+        {
+          "type": "p",
+          "text": "Let us compare the maturity amount when you have Rs 1,20,000 to invest over 1 year at 7% interest with quarterly compounding:"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "FD (Lump Sum)", "RD (Rs 10,000/month)"],
+          "rows": [
+            ["Total Investment", "Rs 1,20,000 (upfront)", "Rs 1,20,000 (Rs 10,000 x 12)"],
+            ["Interest Earned", "Rs 8,604", "Rs 4,676"],
+            ["Maturity Amount", "Rs 1,28,604", "Rs 1,24,676"],
+            ["Effective Return", "7.17% (with compounding)", "3.90% (on total invested)"],
+            ["Extra Earnings in FD", "—", "Rs 3,928 more in FD"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The FD earns Rs 3,928 more than the RD even though the total amount invested is the same. This is because in the FD, the full Rs 1,20,000 earns interest for 12 months. In the RD, only the first instalment earns 12 months of interest — the last instalment earns only 1 month of interest."
+        },
+        {
+          "type": "h2",
+          "text": "Flexibility and Premature Withdrawal"
+        },
+        {
+          "type": "p",
+          "text": "Both FDs and RDs allow premature withdrawal, but the rules differ slightly:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "FD premature withdrawal: Most banks charge a penalty of 0.50% to 1.00% on the applicable rate. You can withdraw the full amount anytime. Some banks offer sweep-in FDs that auto-break only the required portion.",
+            "RD premature closure: Banks allow premature closure of RDs, but interest is recalculated at the rate applicable for the actual deposit period, minus a penalty of 0.50-1.00%. Some banks require a minimum of 3 monthly deposits before allowing premature closure.",
+            "RD missed instalments: If you miss RD instalments, the bank charges a penalty (usually Rs 1 per Rs 100 per month of default). Consecutive missed instalments for 3-6 months may lead to automatic closure of the RD.",
+            "Loan against FD: You can easily get a loan up to 90% of your FD value at 1-2% above the FD rate. Loans against RD are also available but less common."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Tax Treatment — FD vs RD"
+        },
+        {
+          "type": "p",
+          "text": "Both FD and RD interest are taxed identically under the Income Tax Act. The interest earned is added to your total income and taxed as per your applicable slab rate. Key tax rules:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "TDS threshold: Rs 40,000 per year for general citizens, Rs 50,000 for senior citizens. TDS applies on total FD/RD interest across all accounts at the same bank.",
+            "TDS rate: 10% with PAN, 20% without PAN.",
+            "Form 15G/15H: Submit at the start of each financial year to avoid TDS if total income is below taxable limit.",
+            "Section 80C: Only 5-year tax-saving FDs qualify for deduction. There is no tax-saving RD option.",
+            "Reporting in ITR: Both FD and RD interest must be reported in your income tax return, even if TDS is already deducted."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "When to Choose FD vs RD"
+        },
+        {
+          "type": "h3",
+          "text": "Choose FD When"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You have a lump sum amount available for investment.",
+            "You want maximum returns on your savings.",
+            "You want flexibility to choose any tenure from 7 days to 10 years.",
+            "You need a loan against your deposit (easier with FD).",
+            "You want tax savings under Section 80C (5-year tax-saving FD)."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Choose RD When"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You receive monthly income and want to save a fixed portion every month.",
+            "You do not have a lump sum to invest upfront.",
+            "You want to build a disciplined savings habit.",
+            "You are saving for a specific goal with monthly contributions (e.g., vacation, down payment).",
+            "You want guaranteed returns without market risk on your monthly savings."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Does FD give more interest than RD?", "a": "Yes, FD gives more total interest than RD at the same rate and tenure because the entire principal earns interest from day one. In an RD, each monthly instalment earns interest for a progressively shorter period. For Rs 1,20,000 at 7% for 1 year, FD earns approximately Rs 8,604 while RD earns approximately Rs 4,676 — a difference of nearly Rs 3,928." },
+        { "q": "Can I convert an RD to FD?", "a": "No, you cannot directly convert an existing RD to an FD. However, you can prematurely close your RD and use the proceeds to open a new FD. Keep in mind that premature closure of RD may attract a penalty and interest recalculation at a lower rate applicable for the actual period." },
+        { "q": "Is RD better than FD for salaried people?", "a": "RD is a good option for salaried people who want to save a fixed amount monthly since they receive monthly income. However, if you have a lump sum (like a bonus or savings), FD gives better returns. The ideal strategy for salaried individuals is to use RDs for monthly savings discipline and FDs for lump sum investments like bonuses." },
+        { "q": "What happens if I miss an RD instalment?", "a": "If you miss an RD instalment, the bank charges a penalty, typically Rs 1 per Rs 100 per month of default (equivalent to 1.2% per annum on the missed amount). Most banks allow you to make up missed instalments in the following month. However, if you miss instalments continuously for 3-6 months, the bank may automatically close your RD with applicable penalties." },
+        { "q": "Which is safer — FD or RD?", "a": "Both FD and RD are equally safe as they are offered by the same banks and are covered under the same DICGC insurance of up to Rs 5 lakh per depositor per bank. Post Office FDs and RDs carry sovereign guarantee. The safety depends on the institution, not the product type." }
+      ]
+    },
+    {
+      "slug": "tds-on-fd",
+      "title": "TDS on Fixed Deposit — Rules, Limits & How to Save Tax (2026)",
+      "description": "Complete guide to TDS on FD interest in 2026. Learn about Rs 40K/50K limits, Form 15G/15H, TDS rates, how to claim refund, and tips to reduce TDS on fixed deposits.",
+      "keywords": "tds on fd, tds on fixed deposit, fd tds limit, form 15g 15h, tds on fd interest, how to avoid tds on fd, tds refund on fd",
+      "heroTitle": "TDS on Fixed Deposit — Complete Guide",
+      "heroSub": "Understand TDS rules on FD interest — thresholds, rates, Form 15G/15H, and how to claim a refund if excess TDS is deducted.",
+      "contentType": "guide",
+      "ctaText": "Calculate FD Returns",
+      "ctaLink": "/",
+      "guideContent": [
+        {
+          "type": "h2",
+          "text": "What is TDS on Fixed Deposit?"
+        },
+        {
+          "type": "p",
+          "text": "Tax Deducted at Source (TDS) on Fixed Deposits is a mechanism where the bank deducts income tax on the interest earned from your FD before crediting it to your account. TDS is deducted under Section 194A of the Income Tax Act, 1961. It is essentially an advance tax collection method — the bank deducts tax and deposits it with the government on your behalf."
+        },
+        {
+          "type": "p",
+          "text": "TDS is not an additional tax — it is simply a prepayment of your income tax liability. If the TDS deducted exceeds your actual tax liability for the year, you can claim a refund when filing your Income Tax Return (ITR)."
+        },
+        {
+          "type": "h2",
+          "text": "TDS Threshold Limits — When is TDS Deducted?"
+        },
+        {
+          "type": "p",
+          "text": "TDS is deducted only when the total interest earned from all FDs at the same bank exceeds a specified limit in a financial year. The limits are:"
+        },
+        {
+          "type": "table",
+          "headers": ["Category", "TDS Threshold (per bank, per year)", "TDS Rate"],
+          "rows": [
+            ["General Citizens (below 60 years)", "Rs 40,000", "10% (with PAN)"],
+            ["Senior Citizens (60+ years)", "Rs 50,000", "10% (with PAN)"],
+            ["Without PAN", "Rs 40,000 / Rs 50,000", "20%"],
+            ["NRI (NRO FD)", "No threshold — TDS on all interest", "30% + surcharge + cess"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Important: The threshold applies to the total interest across ALL your FDs at the same bank, not per FD. If you have 5 FDs at SBI earning Rs 10,000 each, your total interest is Rs 50,000 — which exceeds the Rs 40,000 limit, and TDS will be deducted."
+        },
+        {
+          "type": "h2",
+          "text": "Form 15G and Form 15H — How to Avoid TDS"
+        },
+        {
+          "type": "p",
+          "text": "If your total annual income is below the basic exemption limit, you can submit Form 15G (for individuals below 60 years) or Form 15H (for senior citizens aged 60+) to your bank to prevent TDS deduction on your FD interest."
+        },
+        {
+          "type": "h3",
+          "text": "Form 15G — For General Citizens"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Eligibility: Individual or HUF with total income below the basic exemption limit (Rs 2,50,000 under old regime, or up to Rs 7,00,000 under new regime with rebate).",
+            "Submit at: Your bank branch or online through net banking at the start of each financial year (April).",
+            "Validity: One financial year only. Must be resubmitted every year.",
+            "Multi-bank: Must be submitted separately at each bank where you hold FDs.",
+            "Effect: Bank will not deduct any TDS on your FD interest for that financial year."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Form 15H — For Senior Citizens"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Eligibility: Individuals aged 60 years or above whose total tax liability for the year is nil.",
+            "Key advantage: Senior citizens can submit Form 15H even if their total income exceeds the basic exemption limit, as long as the tax on total income is zero (after deductions and rebates).",
+            "Section 80TTB: Senior citizens can claim Rs 50,000 deduction on interest income under 80TTB (old regime), which effectively raises the non-taxable threshold for FD interest.",
+            "Submit each year: Form 15H must be submitted fresh at the beginning of each financial year."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "TDS on Cumulative FD — When is TDS Deducted?"
+        },
+        {
+          "type": "p",
+          "text": "A common misconception is that TDS on cumulative FDs is deducted only at maturity. In reality, TDS is deducted annually on accrued interest, even if the interest is not physically paid out."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Banks calculate interest accrued for each financial year and deduct TDS if it exceeds the threshold.",
+            "For a 5-year FD, TDS is deducted in each of the 5 financial years on the interest accrued that year — not in one lump sum at maturity.",
+            "The interest is credited to an internal 'Interest Payable' account for cumulative FDs, and TDS is computed on this accrued amount.",
+            "You must report the accrued interest in your ITR each year, not just in the maturity year."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "How to Claim TDS Refund on FD"
+        },
+        {
+          "type": "p",
+          "text": "If excess TDS has been deducted (e.g., your total income falls below the taxable limit after deductions), you can claim a refund by following these steps:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Download Form 26AS or AIS (Annual Information Statement) from the Income Tax portal to verify the TDS deducted by your bank.",
+            "File your Income Tax Return (ITR) for the financial year, declaring all income including FD interest.",
+            "The ITR will automatically calculate your tax liability and compare it with TDS already deducted.",
+            "If TDS exceeds your tax liability, the excess amount will be shown as a refund.",
+            "The refund is credited directly to your bank account linked with your PAN, typically within 30-60 days of ITR processing."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Tips to Reduce TDS on Fixed Deposits"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Split FDs across banks: Distribute your FDs across multiple banks so that interest at each bank stays below Rs 40,000. TDS threshold is calculated per bank, not combined.",
+            "Submit Form 15G/15H early: Submit the form at the beginning of each financial year (April) to prevent TDS from the start. Late submission may still result in TDS for the months before submission.",
+            "Choose shorter tenures: Shorter FDs mature and renew within the year, making it easier to manage interest below the TDS threshold at each bank.",
+            "Open joint FDs: In a joint FD with the 'either or survivor' option, interest is taxed in the name of the first holder. Choose the holder with lower income as the first holder.",
+            "Consider tax-free bonds: If you are in a higher tax bracket, consider tax-free bonds as an alternative where interest is completely exempt from tax."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What is the TDS limit on FD interest for 2026?", "a": "For FY 2025-26, TDS on FD interest is deducted when total interest from all FDs at the same bank exceeds Rs 40,000 per year for general citizens (below 60 years) and Rs 50,000 for senior citizens (60+). TDS is deducted at 10% if PAN is provided, and 20% without PAN." },
+        { "q": "How can I avoid TDS on my Fixed Deposit?", "a": "Submit Form 15G (if below 60 years) or Form 15H (if 60+ years) at the beginning of each financial year at every bank where you hold FDs. This tells the bank not to deduct TDS. You are eligible if your total income is below the taxable limit. Additionally, spreading FDs across multiple banks keeps per-bank interest below the TDS threshold." },
+        { "q": "Is TDS on FD deducted yearly or at maturity?", "a": "TDS on FD is deducted every financial year on the interest accrued during that year, even for cumulative FDs. Banks calculate interest earned in each financial year and deduct TDS if it exceeds the threshold. This applies to all FD types — the common belief that TDS is only deducted at maturity for cumulative FDs is incorrect." },
+        { "q": "Can I get a TDS refund on FD interest?", "a": "Yes, if your total income after all deductions is below the taxable limit but TDS was deducted on your FD interest, you can claim a refund. File your ITR, declare all income, and the excess TDS will be refunded to your bank account within 30-60 days of processing. Check Form 26AS or AIS on the IT portal to verify TDS amounts." },
+        { "q": "What is the TDS rate for NRI on FD?", "a": "For NRI FDs (NRO accounts), TDS is deducted at 30% plus applicable surcharge and cess on ALL interest earned — there is no threshold limit. NRIs cannot submit Form 15G/15H. However, NRIs can apply for a lower TDS certificate under Section 197 if they are eligible for benefits under DTAA (Double Taxation Avoidance Agreement) with their country of residence." }
+      ]
+    },
+    {
+      "slug": "corporate-fd-guide",
+      "title": "Corporate Fixed Deposits — Higher Returns, Higher Risk? (Complete Guide)",
+      "description": "Complete guide to Corporate FDs in 2026. Learn about corporate FD vs bank FD, top corporate FD rates, credit ratings, DICGC insurance, risks, and how to choose safely.",
+      "keywords": "corporate fd, corporate fixed deposit, company fd vs bank fd, corporate fd rates 2026, bajaj finance fd, shriram finance fd, corporate fd risk, corporate fd credit rating",
+      "heroTitle": "Corporate FD Guide — Higher Returns, Higher Risk?",
+      "heroSub": "Corporate FDs offer 0.50-1.50% higher interest than bank FDs. Understand the risks, compare rates, and learn how credit ratings protect your investment.",
+      "contentType": "guide",
+      "ctaText": "Calculate FD Returns",
+      "ctaLink": "/",
+      "guideContent": [
+        {
+          "type": "h2",
+          "text": "What Are Corporate Fixed Deposits?"
+        },
+        {
+          "type": "p",
+          "text": "Corporate Fixed Deposits (also called Company FDs) are term deposits offered by Non-Banking Financial Companies (NBFCs) and corporates directly to the public. Unlike bank FDs, corporate FDs are not bank deposits — they are debt instruments issued by companies to raise funds from individual investors at interest rates typically 0.50% to 1.50% higher than bank FD rates."
+        },
+        {
+          "type": "p",
+          "text": "Popular corporate FD issuers include Bajaj Finance, Shriram Finance, Mahindra Finance, PNB Housing, HDFC Ltd (now merged with HDFC Bank), and Sundaram Finance. These are regulated by the Reserve Bank of India (for NBFCs) and SEBI (for non-NBFC companies accepting public deposits)."
+        },
+        {
+          "type": "h2",
+          "text": "Corporate FD vs Bank FD — Key Differences"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "Bank FD", "Corporate FD"],
+          "rows": [
+            ["Issuer", "Commercial banks (SBI, HDFC, ICICI)", "NBFCs & corporates (Bajaj Finance, Shriram)"],
+            ["Interest Rate", "6.50-7.25% (general)", "7.40-8.50% (general)"],
+            ["DICGC Insurance", "Yes — up to Rs 5 lakh per depositor", "No — not covered by DICGC"],
+            ["Safety", "Very high (RBI regulated + DICGC)", "Moderate to high (credit rating dependent)"],
+            ["Regulator", "RBI", "RBI (NBFCs) / SEBI (companies)"],
+            ["Minimum Deposit", "Rs 1,000 - Rs 10,000", "Rs 15,000 - Rs 25,000"],
+            ["Tenure", "7 days to 10 years", "12 months to 5 years (typically)"],
+            ["Premature Withdrawal", "Allowed with small penalty", "Restrictions may apply; longer lock-in common"],
+            ["Tax Saving (80C)", "5-year tax-saving FD available", "5-year option available at select NBFCs"],
+            ["Loan Against FD", "Easily available (up to 90%)", "May or may not be available"]
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Top Corporate FD Rates in 2026"
+        },
+        {
+          "type": "p",
+          "text": "Here are the highest corporate FD interest rates currently available from reputable issuers with strong credit ratings:"
+        },
+        {
+          "type": "table",
+          "headers": ["Company", "Rating", "General Rate", "Senior Rate", "Min Deposit", "Tenure"],
+          "rows": [
+            ["Bajaj Finance", "CRISIL AAA / ICRA AAA", "7.40%", "7.65%", "Rs 15,000", "12-60 months"],
+            ["Shriram Finance", "CRISIL AA+ / ICRA AA+", "7.71%", "8.21%", "Rs 5,000", "12-60 months"],
+            ["Mahindra Finance", "CRISIL AAA", "7.60%", "7.85%", "Rs 5,000", "12-60 months"],
+            ["PNB Housing Finance", "CRISIL AA+", "7.40%", "7.65%", "Rs 10,000", "12-60 months"],
+            ["Sundaram Finance", "CRISIL AAA", "7.35%", "7.60%", "Rs 10,000", "12-36 months"],
+            ["HUDCO", "CRISIL AAA (Govt)", "7.38%", "7.63%", "Rs 10,000", "12-60 months"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Note: Rates are indicative and change periodically. Always verify the latest rates on the company's website or through authorized agents before investing."
+        },
+        {
+          "type": "h2",
+          "text": "Understanding Credit Ratings for Corporate FDs"
+        },
+        {
+          "type": "p",
+          "text": "Credit rating is the single most important factor when choosing a corporate FD. It indicates the company's ability to repay your principal and interest on time. In India, credit ratings are issued by agencies like CRISIL, ICRA, CARE, and India Ratings."
+        },
+        {
+          "type": "table",
+          "headers": ["Rating", "Safety Level", "Meaning", "Should You Invest?"],
+          "rows": [
+            ["AAA", "Highest safety", "Strongest capacity to repay, negligible default risk", "Yes — safest corporate FDs"],
+            ["AA+ / AA", "High safety", "Very strong capacity, very low default risk", "Yes — with reasonable caution"],
+            ["A+ / A", "Adequate safety", "Adequate capacity, but more vulnerable to economic changes", "Only with careful assessment"],
+            ["BBB or below", "Moderate to high risk", "Moderate capacity, vulnerable to adverse conditions", "Not recommended for retail investors"]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Golden rule: Only invest in corporate FDs rated AA or above. AAA-rated corporate FDs from well-established companies like Bajaj Finance, Mahindra Finance, and Sundaram Finance have historically had zero default instances."
+        },
+        {
+          "type": "h2",
+          "text": "DICGC Insurance — Why Corporate FDs Are Not Covered"
+        },
+        {
+          "type": "p",
+          "text": "The Deposit Insurance and Credit Guarantee Corporation (DICGC) insures bank deposits (including FDs) up to Rs 5 lakh per depositor per bank. This insurance covers your money even if the bank fails. However, corporate FDs are NOT covered by DICGC because they are not bank deposits — they are company borrowings."
+        },
+        {
+          "type": "p",
+          "text": "This means if a company defaults on its FD obligations, you have no government insurance to fall back on. Your recovery would depend on the company's financial health, asset quality, and the legal resolution process. This is the primary reason corporate FDs offer higher interest rates — the extra return compensates for the additional risk."
+        },
+        {
+          "type": "h2",
+          "text": "How to Invest Safely in Corporate FDs"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stick to AAA or AA+ rated FDs: Only invest in the highest-rated corporate FDs. Companies with AAA ratings from CRISIL or ICRA have historically never defaulted.",
+            "Limit exposure: Do not put more than 10-15% of your total fixed income portfolio in corporate FDs. Keep the majority in bank FDs for DICGC protection.",
+            "Diversify across issuers: Spread your corporate FD investments across 2-3 companies to reduce concentration risk.",
+            "Choose shorter tenures: Opt for 1-2 year tenures rather than 5-year lock-ins. This reduces your risk exposure and allows reassessment at renewal.",
+            "Verify rating regularly: Credit ratings can change. Before renewal, check the latest rating. If a company's rating is downgraded, do not renew.",
+            "Invest directly: Always invest through the company's official website or authorized branches. Avoid third-party agents who may charge commissions that reduce your effective return."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Are corporate FDs safe to invest?", "a": "Corporate FDs rated AAA or AA+ from established NBFCs like Bajaj Finance, Mahindra Finance, and Sundaram Finance have historically been safe with zero defaults. However, they are not DICGC insured like bank FDs. The safety depends entirely on the company's financial health and credit rating. Always check the latest credit rating before investing." },
+        { "q": "Is Bajaj Finance FD safe?", "a": "Bajaj Finance FD is considered one of the safest corporate FDs with CRISIL AAA and ICRA AAA ratings — the highest possible. The company has never defaulted on its FD obligations. However, it is still a corporate FD and not covered by DICGC insurance. For amounts above Rs 5 lakh, many investors prefer Bajaj Finance FD for its higher rate compared to banks." },
+        { "q": "What happens if a company defaults on its FD?", "a": "If a company defaults on its FD, your deposits are at risk. You would need to file a claim through the legal resolution process. Under the SARFAESI Act and IBC (Insolvency and Bankruptcy Code), FD holders are classified as unsecured creditors and may recover only a partial amount depending on the company's assets. This is why credit rating is crucial." },
+        { "q": "Is TDS applicable on corporate FDs?", "a": "Yes, TDS rules for corporate FDs are the same as bank FDs — TDS is deducted at 10% when annual interest exceeds Rs 5,000 (note: for NBFC FDs, the threshold is Rs 5,000, not Rs 40,000 as with bank FDs). Submit Form 15G/15H if your total income is below the taxable limit. The lower threshold means TDS kicks in earlier with corporate FDs." },
+        { "q": "Can I get a loan against corporate FD?", "a": "Some NBFCs like Bajaj Finance offer loans against their own FDs at 1-2% above the FD rate, similar to banks. However, this facility is not universally available across all corporate FD issuers. If loan-against-FD is important to you, verify availability before investing. Bank FDs generally offer more flexible and widely available loan facilities." }
+      ]
     }
   ]
 }
