@@ -77,6 +77,8 @@ function ensureDir(dir) {
 // ─── Load data ───────────────────────────────────────────────────────────────
 const banks = JSON.parse(fs.readFileSync(path.join(DATA, 'banks.json'), 'utf8'));
 const layoutTemplate = fs.readFileSync(path.join(TEMPLATES, 'layout.html'), 'utf8');
+const affiliateData = JSON.parse(fs.readFileSync(path.join(DATA, 'affiliates.json'), 'utf8'));
+const affiliateTemplate = fs.readFileSync(path.join(TEMPLATES, 'affiliate.html'), 'utf8');
 
 // ─── Calculator JS (shared across all pages) ────────────────────────────────
 const CALCULATOR_JS = `
@@ -965,6 +967,402 @@ ${calculatorHTML()}
   allPages.push(slug);
 }
 
+// ─── Affiliate page generator ────────────────────────────────────────────────
+
+function buildAffiliatePage(opts) {
+  const { title, description, keywords, canonicalPath, breadcrumb, breadcrumbItems, content, faqSection, linksSection, disclaimer, jsonLd } = opts;
+
+  let allJsonLd = '';
+  if (jsonLd) allJsonLd += `<script type="application/ld+json">\n${jsonLd}\n</script>\n`;
+  if (breadcrumbItems) allJsonLd += `    <script type="application/ld+json">\n${breadcrumbSchemaJSON(breadcrumbItems)}\n</script>`;
+
+  const verificationTag = GOOGLE_VERIFICATION ? `<meta name="google-site-verification" content="${GOOGLE_VERIFICATION}">` : '';
+
+  let html = affiliateTemplate
+    .replace(/{{PAGE_TITLE}}/g, title)
+    .replace(/{{META_DESCRIPTION}}/g, description)
+    .replace(/{{META_KEYWORDS}}/g, keywords || '')
+    .replace(/{{CANONICAL_PATH}}/g, canonicalPath)
+    .replace('{{JSON_LD}}', allJsonLd)
+    .replace('{{GOOGLE_VERIFICATION}}', verificationTag)
+    .replace('{{BREADCRUMB}}', breadcrumb || '')
+    .replace('{{CONTENT}}', content)
+    .replace('{{FAQ_SECTION}}', faqSection || '')
+    .replace('{{LINKS_SECTION}}', linksSection || '')
+    .replace('{{DISCLAIMER}}', disclaimer || '');
+
+  return html;
+}
+
+function generateAffiliatePage(pageData) {
+  const { slug, title, description, keywords, heroTitle, heroSub, pageType, sortBy, topPicks, editorNotes, badges, ctaText, faqs, comparisonFactors } = pageData;
+
+  let content = '';
+
+  if (pageType === 'rate-comparison') {
+    // --- Best FD Rates page ---
+    const sortTenure = sortBy || '1-year';
+    const banksWithTenure = banks
+      .filter(b => b.fd[sortTenure])
+      .sort((a, b) => b.fd[sortTenure].general - a.fd[sortTenure].general);
+
+    // Top 3 Picks
+    const topBanks = topPicks
+      .map(slug => banks.find(b => b.slug === slug))
+      .filter(b => b);
+
+    const picksHTML = topBanks.map((bank, i) => {
+      const bestTenure = Object.keys(bank.fd).reduce((best, t) => bank.fd[t].general > (bank.fd[best]?.general || 0) ? t : best, Object.keys(bank.fd)[0]);
+      const bestRate = bank.fd[bestTenure].general;
+      const seniorRate = bank.fd[bestTenure].senior;
+      const badgeText = badges[bank.slug] || '';
+      const note = editorNotes[bank.slug] || '';
+
+      return `
+    <div class="pick-card${i === 0 ? ' featured' : ''}">
+        ${badgeText ? `<div class="pick-badge">${badgeText}</div>` : ''}
+        <div class="pick-rank">#${i + 1} Pick</div>
+        <div class="pick-name">${bank.fullName}</div>
+        <div class="pick-rate">${bestRate}% <small>p.a.</small></div>
+        <p class="pick-note">${note}</p>
+        <ul class="pick-features">
+            <li>Senior citizen rate: ${seniorRate}%</li>
+            <li>Min deposit: \u20B9${formatINR(bank.minDeposit)}</li>
+            <li>Compounding: ${bank.compounding}</li>
+            <li>${bank.type === 'bank' ? 'DICGC insured up to \u20B95 Lakh' : 'RBI regulated NBFC'}</li>
+        </ul>
+        <a href="/${bank.slug}-fd-calculator" class="pick-cta">${ctaText} \u2192</a>
+    </div>`;
+    }).join('');
+
+    // Full comparison table
+    const allBanksSorted = [...banks].sort((a, b) => {
+      const aRate = a.fd[sortTenure]?.general || 0;
+      const bRate = b.fd[sortTenure]?.general || 0;
+      return bRate - aRate;
+    });
+
+    const tableRows = allBanksSorted.map(bank => {
+      const r1y = bank.fd['1-year']?.general || '-';
+      const r3y = bank.fd['3-years']?.general || '-';
+      const r5y = bank.fd['5-years']?.general || '-';
+      const bestTenure = Object.keys(bank.fd).reduce((best, t) => bank.fd[t].general > (bank.fd[best]?.general || 0) ? t : best, Object.keys(bank.fd)[0]);
+      const seniorBonus = (bank.fd[bestTenure].senior - bank.fd[bestTenure].general).toFixed(2);
+      return `<tr>
+        <td class="bank-name"><a href="/${bank.slug}-fd-calculator" style="color:var(--text);text-decoration:none">${bank.name}</a></td>
+        <td class="rate-col">${r1y}%</td>
+        <td>${r3y}%</td>
+        <td>${r5y}%</td>
+        <td>+${seniorBonus}%</td>
+        <td>\u20B9${formatINR(bank.minDeposit)}</td>
+        <td class="cta-col"><a href="/${bank.slug}-fd-calculator" class="table-cta">${ctaText} \u2192</a></td>
+    </tr>`;
+    }).join('');
+
+    content = `
+<section class="page-hero">
+    <h1><span class="hl">${heroTitle}</span> in India ${YEAR}</h1>
+    <p>${heroSub}</p>
+    <div class="updated">Updated: ${new Date().toLocaleString('en-IN', { month: 'long', year: 'numeric' })}</div>
+</section>
+
+<!-- Ad: Below Hero -->
+<div style="max-width:1200px;margin:0 auto 24px;padding:0 24px;text-align:center;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8235932614579966" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="top-picks">
+    <h2 class="top-picks-title">Our Top Picks</h2>
+    <div class="picks-grid">
+        ${picksHTML}
+    </div>
+</section>
+
+<section class="comparison-section">
+    <h2>All FD Rates \u2014 Full Comparison ${YEAR}</h2>
+    <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px;">Sorted by 1-year FD rate (highest first). Rates shown are for general citizens.</p>
+    <div class="table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Bank</th>
+                    <th>1Y Rate</th>
+                    <th>3Y Rate</th>
+                    <th>5Y Rate</th>
+                    <th>Senior +</th>
+                    <th>Min Deposit</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                ${tableRows}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="calc-cta">
+    <div class="calc-cta-box">
+        <h3>Calculate Your FD Maturity</h3>
+        <p>Know your exact maturity amount, interest earned, and year-wise growth schedule.</p>
+        <a href="/" class="calc-cta-btn">Open FD Calculator \u2192</a>
+    </div>
+</section>`;
+
+  } else if (pageType === 'tax-saving') {
+    // --- Tax Saving FD page ---
+    const taxBanks = banks
+      .filter(b => b.fd['5-years'] && b.type === 'bank' || b.type === 'govt')
+      .sort((a, b) => b.fd['5-years'].general - a.fd['5-years'].general);
+
+    // Top 3 Picks
+    const topBanks = topPicks
+      .map(slug => banks.find(b => b.slug === slug))
+      .filter(b => b && b.fd['5-years']);
+
+    const picksHTML = topBanks.map((bank, i) => {
+      const fd5y = bank.fd['5-years'];
+      const badgeText = badges[bank.slug] || '';
+      const note = editorNotes[bank.slug] || '';
+
+      return `
+    <div class="pick-card${i === 0 ? ' featured' : ''}">
+        ${badgeText ? `<div class="pick-badge">${badgeText}</div>` : ''}
+        <div class="pick-rank">#${i + 1} Pick</div>
+        <div class="pick-name">${bank.fullName}</div>
+        <div class="pick-rate">${fd5y.general}% <small>p.a.</small></div>
+        <p class="pick-note">${note}</p>
+        <ul class="pick-features">
+            <li>Senior citizen rate: ${fd5y.senior}%</li>
+            <li>Min deposit: \u20B9${formatINR(bank.minDeposit)}</li>
+            <li>Lock-in: 5 years (mandatory)</li>
+            <li>Section 80C deduction up to \u20B91.5 Lakh</li>
+        </ul>
+        <a href="/${bank.slug}-fd-rates-5-years" class="pick-cta">${ctaText} \u2192</a>
+    </div>`;
+    }).join('');
+
+    // Tax saving comparison table
+    const tableRows = taxBanks.map(bank => {
+      const fd5y = bank.fd['5-years'];
+      const maturity = calculateMaturity(150000, fd5y.general, 5, 4);
+      return `<tr>
+        <td class="bank-name"><a href="/${bank.slug}-fd-rates-5-years" style="color:var(--text);text-decoration:none">${bank.name}</a></td>
+        <td class="rate-col">${fd5y.general}%</td>
+        <td>${fd5y.senior}%</td>
+        <td>\u20B9${formatINR(bank.minDeposit)}</td>
+        <td>\u20B9${formatINR(maturity)}</td>
+        <td style="color:var(--green)">Yes</td>
+        <td class="cta-col"><a href="/${bank.slug}-fd-rates-5-years" class="table-cta">${ctaText} \u2192</a></td>
+    </tr>`;
+    }).join('');
+
+    content = `
+<section class="page-hero">
+    <h1><span class="hl">${heroTitle}</span> ${YEAR} \u2014 Section 80C</h1>
+    <p>${heroSub}</p>
+    <div class="updated">Updated: ${new Date().toLocaleString('en-IN', { month: 'long', year: 'numeric' })}</div>
+</section>
+
+<!-- Ad: Below Hero -->
+<div style="max-width:1200px;margin:0 auto 24px;padding:0 24px;text-align:center;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8235932614579966" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="top-picks">
+    <h2 class="top-picks-title">Our Top Picks for Tax Saving FD</h2>
+    <div class="picks-grid">
+        ${picksHTML}
+    </div>
+</section>
+
+<section class="comparison-section">
+    <h2>Tax Saving FD Rates \u2014 All Banks ${YEAR}</h2>
+    <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px;">5-year lock-in FDs eligible under Section 80C. Maturity calculated for \u20B91.5 Lakh deposit (max 80C limit). Sorted by rate.</p>
+    <div class="table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Bank</th>
+                    <th>5Y General Rate</th>
+                    <th>5Y Senior Rate</th>
+                    <th>Min Deposit</th>
+                    <th>Maturity (\u20B91.5L)</th>
+                    <th>80C Eligible</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                ${tableRows}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>How Tax Saving FD Works Under Section 80C</h2>
+    <p>A tax saving Fixed Deposit is a special FD with a mandatory 5-year lock-in period. The principal amount (up to \u20B91.5 Lakh per financial year) qualifies for tax deduction under Section 80C of the Income Tax Act.</p>
+    <ul>
+        <li><strong>Lock-in Period:</strong> 5 years (no premature withdrawal)</li>
+        <li><strong>Max Deduction:</strong> \u20B91.5 Lakh under Section 80C</li>
+        <li><strong>Interest Taxability:</strong> Interest earned is fully taxable as per your slab</li>
+        <li><strong>Nomination:</strong> Available (but not joint holding with \u201Cor\u201D option)</li>
+        <li><strong>Eligibility:</strong> Only banks and Post Office FDs qualify (not NBFC FDs)</li>
+    </ul>
+</section>
+
+<section class="calc-cta">
+    <div class="calc-cta-box">
+        <h3>Calculate Your Tax Saving FD Maturity</h3>
+        <p>See exact maturity for \u20B91.5 Lakh invested for 5 years at your chosen bank's rate.</p>
+        <a href="/" class="calc-cta-btn">Open FD Calculator \u2192</a>
+    </div>
+</section>`;
+
+  } else if (pageType === 'comparison-article') {
+    // --- FD vs Debt Mutual Fund page ---
+    const factors = comparisonFactors || [];
+    const comparisonRows = factors.map(f => `<tr>
+        <td class="bank-name">${f.factor}</td>
+        <td>${f.fd}</td>
+        <td>${f.debtMF}</td>
+    </tr>`).join('');
+
+    // Get avg FD rates for context
+    const avgRate1Y = (banks.filter(b => b.fd['1-year']).reduce((sum, b) => sum + b.fd['1-year'].general, 0) / banks.filter(b => b.fd['1-year']).length).toFixed(2);
+    const avgRate5Y = (banks.filter(b => b.fd['5-years']).reduce((sum, b) => sum + b.fd['5-years'].general, 0) / banks.filter(b => b.fd['5-years']).length).toFixed(2);
+
+    content = `
+<section class="page-hero">
+    <h1><span class="hl">${heroTitle}</span> ${YEAR}</h1>
+    <p>${heroSub}</p>
+    <div class="updated">Updated: ${new Date().toLocaleString('en-IN', { month: 'long', year: 'numeric' })}</div>
+</section>
+
+<!-- Ad: Below Hero -->
+<div style="max-width:1200px;margin:0 auto 24px;padding:0 24px;text-align:center;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8235932614579966" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="comparison-section">
+    <h2>FD vs Debt Mutual Fund \u2014 Side by Side Comparison</h2>
+    <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px;">A comprehensive comparison across 10 key factors to help you decide.</p>
+    <div class="table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Factor</th>
+                    <th>Fixed Deposit (FD)</th>
+                    <th>Debt Mutual Fund</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${comparisonRows}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>When to Choose Fixed Deposits</h2>
+    <p>Fixed Deposits are the right choice when you prioritize capital safety and guaranteed returns. Current average FD rate: ${avgRate1Y}% (1-year) and ${avgRate5Y}% (5-year).</p>
+    <ul>
+        <li><strong>Emergency Fund:</strong> Keep 3-6 months\u2019 expenses in FDs for instant access</li>
+        <li><strong>Senior Citizens:</strong> Higher FD rates (0.25-0.50% extra) provide reliable income</li>
+        <li><strong>Short-term Goals:</strong> Goals within 1-2 years where you can\u2019t afford market risk</li>
+        <li><strong>Tax Saving:</strong> 5-year tax-saving FD qualifies for Section 80C deduction</li>
+        <li><strong>Risk-Averse Investors:</strong> Guaranteed returns regardless of market conditions</li>
+    </ul>
+
+    <h2>When to Choose Debt Mutual Funds</h2>
+    <p>Debt Mutual Funds suit investors who want potentially higher returns and are comfortable with slight NAV fluctuations.</p>
+    <ul>
+        <li><strong>Higher Tax Bracket:</strong> Better post-tax returns for 30% slab investors (historically)</li>
+        <li><strong>Medium-term Goals:</strong> 1-3 year goals where slight volatility is acceptable</li>
+        <li><strong>No TDS:</strong> Unlike FDs, no TDS is deducted on debt fund redemptions</li>
+        <li><strong>Flexibility:</strong> Easy to invest/redeem small amounts without penalty (post exit load period)</li>
+        <li><strong>Portfolio Diversification:</strong> Complement equity investments for balanced allocation</li>
+    </ul>
+</section>
+
+<section class="calc-cta">
+    <div class="calc-cta-box">
+        <h3>Calculate Your FD Returns</h3>
+        <p>Compare what your money would earn in an FD at current bank rates. Use our free FD calculator.</p>
+        <a href="/" class="calc-cta-btn">${ctaText} \u2192</a>
+    </div>
+</section>`;
+  }
+
+  // --- Internal links ---
+  const otherAffiliateLinks = affiliateData.pages
+    .filter(p => p.slug !== slug)
+    .map(p => ({
+      href: `/${p.slug}`,
+      label: p.heroTitle,
+      sub: '',
+    }));
+
+  const tenureLinks = Object.keys(TENURE_TYPES).map(t => ({
+    href: `/${t}-fd-rates`,
+    label: `${TENURE_TYPES[t].label} FD Rates`,
+  }));
+
+  const bankLinks = banks.slice(0, 8).map(b => ({
+    href: `/${b.slug}-fd-calculator`,
+    label: `${b.name} FD Calculator`,
+  }));
+
+  const links =
+    linksGridHTML('More Comparisons', otherAffiliateLinks) +
+    linksGridHTML('FD Rates by Tenure', tenureLinks) +
+    linksGridHTML('Bank FD Calculators', bankLinks);
+
+  // --- FAQ ---
+  const faqItems = faqs.map(f => `
+    <div class="faq-item">
+        <h3>${f.q}</h3>
+        <p>${f.a}</p>
+    </div>`).join('');
+
+  const faqSection = `
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    ${faqItems}
+</section>`;
+
+  // --- Disclaimer ---
+  const disclaimer = `
+<div class="disclaimer">
+    <div class="disclaimer-box">
+        <strong>Disclaimer:</strong> FD interest rates and details shown on this page are sourced from official bank and NBFC websites and are for reference only. Actual rates may vary based on your deposit amount, tenure, and institution's internal policies. We may earn a referral commission when you apply through links on this page, at no extra cost to you. This does not affect our rankings or recommendations. Last verified: ${new Date().toLocaleString('en-IN', { month: 'long', year: 'numeric' })}.
+    </div>
+</div>`;
+
+  const html = buildAffiliatePage({
+    title,
+    description,
+    keywords,
+    canonicalPath: slug,
+    breadcrumb: breadcrumbHTML(bcItems = [
+      { href: '/', label: 'Home' },
+      { label: heroTitle },
+    ]),
+    breadcrumbItems: bcItems,
+    content,
+    faqSection,
+    linksSection: links,
+    disclaimer,
+    jsonLd: faqSchemaJSON(faqs),
+  });
+
+  fs.writeFileSync(path.join(DIST, slug + '.html'), html);
+  allPages.push(slug);
+}
+
 // ─── Sitemap & robots.txt ────────────────────────────────────────────────────
 
 function generateSitemap() {
@@ -1061,6 +1459,11 @@ banks.forEach(bank => {
   });
 });
 console.log(`   \u2192 ${bankTenureAmountCount} bank+tenure+amount pages`);
+
+// Generate affiliate pages
+console.log('\uD83D\uDCDD Generating affiliate pages...');
+affiliateData.pages.forEach(page => generateAffiliatePage(page));
+console.log(`   \u2192 ${affiliateData.pages.length} affiliate pages`);
 
 // Generate sitemap and robots.txt
 console.log('\uD83D\uDDFA\uFE0F  Generating sitemap.xml and robots.txt...');

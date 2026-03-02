@@ -1,0 +1,94 @@
+{
+  "pages": [
+    {
+      "slug": "best-fd-rates",
+      "title": "Best FD Interest Rates in India 2026 — Compare All Banks",
+      "description": "Compare the best FD interest rates in India 2026. See rates from SBI, HDFC, ICICI, Axis, Kotak, PNB, Post Office, Bajaj Finserv & more. Updated monthly.",
+      "keywords": "best fd rates 2026, best fixed deposit rates india, highest fd interest rate, fd rate comparison all banks",
+      "heroTitle": "Best FD Interest Rates",
+      "heroSub": "Compare Fixed Deposit rates from 25+ banks and NBFCs. Find the highest rate for your tenure. Updated for 2026.",
+      "pageType": "rate-comparison",
+      "sortBy": "1-year",
+      "topPicks": ["post-office", "sbi", "kotak-mahindra-bank"],
+      "editorNotes": {
+        "post-office": "India Post offers the best senior citizen FD experience with 7.50% for 5-year tenure and sovereign guarantee. No DICGC limit applies \u2014 your entire deposit is government-backed. Ideal for retirees.",
+        "sbi": "India\u2019s most trusted bank with the largest branch network. SBI\u2019s Amrit Vrishti special scheme offers 7.25% for 444 days. DICGC insured deposits up to \u20b95 Lakh. Best for conservative investors.",
+        "kotak-mahindra-bank": "Kotak offers the best general citizen rate among major banks at 7.10% for 1-year and 2-year tenures. Senior citizens get 7.60%. Strong digital banking and easy online FD booking."
+      },
+      "badges": {
+        "post-office": "Best Senior Rate",
+        "sbi": "Most Trusted",
+        "kotak-mahindra-bank": "Best General Rate"
+      },
+      "ctaText": "Calculate FD Returns",
+      "faqs": [
+        { "q": "Which bank has the highest FD interest rate in 2026?", "a": "Among banks, IndusInd Bank, Yes Bank, and Bandhan Bank offer some of the highest rates at 7.25% for 1-year tenure. Among NBFCs, Shriram Finance offers up to 7.71% and Mahindra Finance up to 7.65%. Post Office offers 7.50% for 5 years. Use the comparison table above to find the best rate for your preferred tenure." },
+        { "q": "Is FD interest rate the same for senior citizens?", "a": "No. Most banks offer 0.25% to 0.50% higher interest for senior citizens (aged 60+). For example, if the general rate is 7.00%, seniors may get 7.50%. Some banks like HDFC and Axis offer up to 0.50% extra. This makes FDs especially attractive for retirees seeking regular income." },
+        { "q": "What is the minimum amount to open a Fixed Deposit?", "a": "It varies by bank. SBI, PNB, and most public sector banks allow FDs from \u20b91,000. Private banks like HDFC and Axis require \u20b95,000, while ICICI and IndusInd require \u20b910,000. NBFC FDs like Bajaj Finserv start at \u20b915,000. Post Office FDs start at \u20b91,000." },
+        { "q": "Are Fixed Deposits safe? What if the bank fails?", "a": "Bank FDs are insured by DICGC (Deposit Insurance and Credit Guarantee Corporation) up to \u20b95 Lakh per depositor per bank, covering both principal and interest. Post Office FDs carry sovereign guarantee with no upper limit. NBFC FDs are not DICGC insured but are regulated by RBI." },
+        { "q": "Do any banks offer special FD schemes with higher rates?", "a": "Yes, several banks offer limited-period special FD schemes: SBI Amrit Vrishti (7.25% for 444 days), Bank of Baroda Bob Tiranga (7.30% for 399 days), PNB Special (7.25% for 400 days), and Bank of India Star Sunidhi (7.30% for 400 days). These often offer higher rates than standard tenures." }
+      ]
+    },
+    {
+      "slug": "best-tax-saving-fd",
+      "title": "Best Tax Saving FD 2026 \u2014 5-Year Fixed Deposit Under Section 80C",
+      "description": "Compare the best tax saving FD rates in 2026. 5-year fixed deposits under Section 80C with rates from SBI, HDFC, ICICI, Post Office & more. Save up to \u20b946,800 in taxes.",
+      "keywords": "best tax saving fd 2026, tax saving fixed deposit, 5 year fd section 80c, tax saving fd rates, 80c fd comparison, tax saver fd rates india",
+      "heroTitle": "Best Tax Saving FD",
+      "heroSub": "Save taxes under Section 80C with 5-year fixed deposits. Compare rates across all banks and Post Office.",
+      "pageType": "tax-saving",
+      "sortBy": "5-years",
+      "topPicks": ["post-office", "hdfc-bank", "idfc-first-bank"],
+      "editorNotes": {
+        "post-office": "Highest tax saving FD rate at 7.50% for 5 years with sovereign guarantee. The interest is also competitive for senior citizens at 7.50%. Best overall choice for Section 80C FD investment.",
+        "hdfc-bank": "HDFC Bank offers 7.00% (general) and 7.50% (senior) for 5-year tax saving FD. With DICGC insurance, massive branch network, and easy online booking, it is a trusted choice for salaried investors.",
+        "idfc-first-bank": "IDFC First Bank offers 7.00% (general) and 7.50% (senior) for the 5-year tax saving FD. Digital-first experience with easy online FD creation and management. Good for tech-savvy investors."
+      },
+      "badges": {
+        "post-office": "Highest Rate",
+        "hdfc-bank": "Most Trusted",
+        "idfc-first-bank": "Best Digital"
+      },
+      "ctaText": "Calculate Maturity",
+      "faqs": [
+        { "q": "What is a tax saving FD?", "a": "A tax saving FD is a 5-year fixed deposit that qualifies for income tax deduction under Section 80C. You can claim deduction up to \u20b91.5 Lakh per financial year, saving up to \u20b946,800 in taxes (at 30% slab + 4% cess). Only bank and Post Office FDs qualify \u2014 NBFC FDs do not." },
+        { "q": "Can I withdraw a tax saving FD before 5 years?", "a": "No. Tax saving FDs have a mandatory 5-year lock-in period. Premature withdrawal, loans, or overdraft against tax saving FDs are not allowed. This lock-in is what qualifies the FD for Section 80C benefits. Plan your liquidity needs before investing." },
+        { "q": "Is the interest on tax saving FD taxable?", "a": "Yes, the interest earned on a tax saving FD is fully taxable as per your income tax slab. TDS is applicable if the annual interest exceeds \u20b940,000 (\u20b950,000 for senior citizens). Only the principal investment qualifies for 80C deduction, not the interest earned." },
+        { "q": "Tax saving FD vs ELSS \u2014 which is better?", "a": "ELSS mutual funds offer higher return potential (12-15% CAGR) with a shorter 3-year lock-in but carry market risk. Tax saving FDs offer guaranteed returns (6.50-7.50%) with a 5-year lock-in and zero risk. Choose FD if you want capital safety and guaranteed returns; choose ELSS for higher growth potential." },
+        { "q": "How much tax can I save with a 5-year FD?", "a": "By investing \u20b91.5 Lakh in a tax saving FD, you can save up to \u20b946,800 per year (at 30% slab + 4% cess). Over 5 years, that is \u20b92.34 Lakh in cumulative tax savings. Meanwhile, at 7.50% interest (Post Office rate), your \u20b91.5 Lakh will mature to approximately \u20b92.16 Lakh." }
+      ]
+    },
+    {
+      "slug": "fd-vs-debt-mutual-fund",
+      "title": "FD vs Debt Mutual Fund 2026 \u2014 Which is Better for You?",
+      "description": "FD vs Debt Mutual Fund: which is better in 2026? Compare returns, tax efficiency, risk, liquidity, and more. Learn when to choose Fixed Deposits and when debt funds work better.",
+      "keywords": "fd vs debt mutual fund, fixed deposit vs mutual fund, fd vs debt fund comparison, which is better fd or mutual fund, fd vs liquid fund, fd vs short term debt fund",
+      "heroTitle": "FD vs Debt Mutual Fund",
+      "heroSub": "Find out which investment suits your goals. Data-driven comparison covering returns, taxes, risk, and liquidity.",
+      "pageType": "comparison-article",
+      "topPicks": [],
+      "editorNotes": {},
+      "badges": {},
+      "ctaText": "Calculate FD Returns",
+      "comparisonFactors": [
+        { "factor": "Returns (Pre-tax)", "fd": "6.5% - 7.7% p.a. (fixed)", "debtMF": "6% - 9% p.a. (variable)" },
+        { "factor": "Returns (Post-tax, 30% slab)", "fd": "4.5% - 5.4% p.a.", "debtMF": "5% - 7.5% p.a. (with indexation for 3+ yrs before April 2023)" },
+        { "factor": "Taxation (< 3 years)", "fd": "As per income tax slab", "debtMF": "As per income tax slab (STCG)" },
+        { "factor": "Taxation (>= 3 years)", "fd": "As per income tax slab", "debtMF": "As per income tax slab (no indexation benefit post April 2023)" },
+        { "factor": "Safety / Risk", "fd": "Very low risk. DICGC insured up to Rs 5L (banks)", "debtMF": "Low to moderate risk. NAV can fluctuate" },
+        { "factor": "Liquidity", "fd": "Premature withdrawal with penalty (0.5-1%)", "debtMF": "Redeem anytime (exit load may apply for 1-3 months)" },
+        { "factor": "Minimum Investment", "fd": "Rs 1,000 - Rs 15,000 depending on bank", "debtMF": "Rs 100 - Rs 500 via SIP" },
+        { "factor": "TDS", "fd": "10% TDS if interest > Rs 40,000/yr", "debtMF": "No TDS on redemption" },
+        { "factor": "Lock-in Period", "fd": "No lock-in (except tax-saving FD: 5 years)", "debtMF": "No lock-in (some funds have exit load period)" },
+        { "factor": "Ideal For", "fd": "Conservative investors, senior citizens, guaranteed returns", "debtMF": "Moderate risk-takers, tax-efficient investing, higher potential returns" }
+      ],
+      "faqs": [
+        { "q": "Is debt mutual fund better than FD?", "a": "It depends on your tax bracket and investment horizon. For investors in the 20-30% tax bracket, debt funds historically offered better post-tax returns due to indexation benefit. However, post April 2023, new debt fund investments are taxed at slab rate, reducing this advantage. FDs offer guaranteed returns with zero NAV risk." },
+        { "q": "Are debt mutual funds safe like FDs?", "a": "Debt mutual funds are generally low-risk but not risk-free. They invest in government bonds, corporate bonds, and money market instruments. The NAV can fluctuate based on interest rate changes and credit events. FDs offer guaranteed returns and bank FDs are DICGC insured up to Rs 5 Lakh." },
+        { "q": "What is the tax rule for debt mutual funds after April 2023?", "a": "From April 2023, gains from debt mutual funds (held for any duration) are taxed as per your income tax slab rate, similar to FD interest taxation. The earlier indexation benefit for long-term holdings (3+ years) has been removed for new investments." },
+        { "q": "Can I lose money in debt mutual funds?", "a": "Yes, though rare, you can face losses in debt funds due to interest rate changes (when rates rise, bond prices fall) or credit default events. However, overnight funds, liquid funds, and government bond funds carry very low risk. FDs never give negative returns." },
+        { "q": "Should I invest in both FD and debt mutual funds?", "a": "Yes, diversification is recommended. Keep your emergency fund and short-term goals in FDs for safety and guaranteed returns. Use debt mutual funds for medium-term goals (1-3 years) where slightly higher returns and better liquidity are beneficial. Consider your overall asset allocation strategy." }
+      ]
+    }
+  ]
+}
