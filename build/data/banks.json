@@ -1,0 +1,421 @@
+[
+  {
+    "slug": "sbi",
+    "name": "SBI",
+    "fullName": "State Bank of India",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.80, "senior": 7.30 },
+      "2-years": { "general": 7.00, "senior": 7.50 },
+      "3-years": { "general": 6.75, "senior": 7.25 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "0.50% penalty on applicable rate",
+    "specialScheme": "Amrit Vrishti - 7.25% for 444 days"
+  },
+  {
+    "slug": "hdfc-bank",
+    "name": "HDFC Bank",
+    "fullName": "HDFC Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.60, "senior": 7.10 },
+      "1-year": { "general": 6.80, "senior": 7.30 },
+      "2-years": { "general": 7.00, "senior": 7.50 },
+      "3-years": { "general": 7.00, "senior": 7.50 },
+      "5-years": { "general": 7.00, "senior": 7.50 }
+    },
+    "minDeposit": 5000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "icici-bank",
+    "name": "ICICI Bank",
+    "fullName": "ICICI Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.90, "senior": 7.40 },
+      "2-years": { "general": 7.00, "senior": 7.50 },
+      "3-years": { "general": 7.00, "senior": 7.50 },
+      "5-years": { "general": 6.90, "senior": 7.40 }
+    },
+    "minDeposit": 10000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "0.50% - 1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "axis-bank",
+    "name": "Axis Bank",
+    "fullName": "Axis Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.90, "senior": 7.40 },
+      "2-years": { "general": 7.10, "senior": 7.60 },
+      "3-years": { "general": 7.10, "senior": 7.60 },
+      "5-years": { "general": 7.00, "senior": 7.50 }
+    },
+    "minDeposit": 5000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "kotak-mahindra-bank",
+    "name": "Kotak Mahindra Bank",
+    "fullName": "Kotak Mahindra Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 7.10, "senior": 7.60 },
+      "2-years": { "general": 7.10, "senior": 7.60 },
+      "3-years": { "general": 6.75, "senior": 7.25 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 5000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "bank-of-baroda",
+    "name": "Bank of Baroda",
+    "fullName": "Bank of Baroda",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.85, "senior": 7.35 },
+      "2-years": { "general": 7.05, "senior": 7.55 },
+      "3-years": { "general": 7.15, "senior": 7.65 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "Bob Tiranga Deposit - 7.30% for 399 days"
+  },
+  {
+    "slug": "pnb",
+    "name": "PNB",
+    "fullName": "Punjab National Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.80, "senior": 7.30 },
+      "2-years": { "general": 7.00, "senior": 7.50 },
+      "3-years": { "general": 7.00, "senior": 7.50 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "PNB Special - 7.25% for 400 days"
+  },
+  {
+    "slug": "canara-bank",
+    "name": "Canara Bank",
+    "fullName": "Canara Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.85, "senior": 7.35 },
+      "2-years": { "general": 7.00, "senior": 7.50 },
+      "3-years": { "general": 6.80, "senior": 7.30 },
+      "5-years": { "general": 6.70, "senior": 7.20 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "union-bank",
+    "name": "Union Bank",
+    "fullName": "Union Bank of India",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.80, "senior": 7.30 },
+      "2-years": { "general": 6.90, "senior": 7.40 },
+      "3-years": { "general": 6.80, "senior": 7.30 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "0.50% penalty on applicable rate",
+    "specialScheme": "Union Special 365 - 7.20% for 365 days"
+  },
+  {
+    "slug": "indian-bank",
+    "name": "Indian Bank",
+    "fullName": "Indian Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.25, "senior": 6.75 },
+      "1-year": { "general": 6.75, "senior": 7.25 },
+      "2-years": { "general": 7.05, "senior": 7.55 },
+      "3-years": { "general": 6.75, "senior": 7.25 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "Ind Super 300 - 7.25% for 300 days"
+  },
+  {
+    "slug": "idbi-bank",
+    "name": "IDBI Bank",
+    "fullName": "IDBI Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.80, "senior": 7.30 },
+      "2-years": { "general": 7.00, "senior": 7.50 },
+      "3-years": { "general": 6.75, "senior": 7.25 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "Utsav FD - 7.20% for 375 days"
+  },
+  {
+    "slug": "bank-of-india",
+    "name": "Bank of India",
+    "fullName": "Bank of India",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.25, "senior": 6.75 },
+      "1-year": { "general": 6.80, "senior": 7.30 },
+      "2-years": { "general": 7.05, "senior": 7.55 },
+      "3-years": { "general": 6.75, "senior": 7.25 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "0.50% penalty on applicable rate",
+    "specialScheme": "Star Sunidhi - 7.30% for 400 days"
+  },
+  {
+    "slug": "central-bank",
+    "name": "Central Bank",
+    "fullName": "Central Bank of India",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.25, "senior": 6.75 },
+      "1-year": { "general": 6.70, "senior": 7.20 },
+      "2-years": { "general": 6.75, "senior": 7.25 },
+      "3-years": { "general": 6.60, "senior": 7.10 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "0.50% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "indusind-bank",
+    "name": "IndusInd Bank",
+    "fullName": "IndusInd Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 7.00, "senior": 7.50 },
+      "1-year": { "general": 7.25, "senior": 7.75 },
+      "2-years": { "general": 7.25, "senior": 7.75 },
+      "3-years": { "general": 7.25, "senior": 7.75 },
+      "5-years": { "general": 7.00, "senior": 7.50 }
+    },
+    "minDeposit": 10000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "yes-bank",
+    "name": "Yes Bank",
+    "fullName": "Yes Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 7.00, "senior": 7.50 },
+      "1-year": { "general": 7.25, "senior": 7.75 },
+      "2-years": { "general": 7.25, "senior": 7.75 },
+      "3-years": { "general": 7.25, "senior": 7.75 },
+      "5-years": { "general": 7.00, "senior": 7.50 }
+    },
+    "minDeposit": 10000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "federal-bank",
+    "name": "Federal Bank",
+    "fullName": "Federal Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 7.00, "senior": 7.50 },
+      "2-years": { "general": 7.10, "senior": 7.60 },
+      "3-years": { "general": 6.75, "senior": 7.25 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 5000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "bandhan-bank",
+    "name": "Bandhan Bank",
+    "fullName": "Bandhan Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 7.15, "senior": 7.65 },
+      "1-year": { "general": 7.25, "senior": 7.75 },
+      "2-years": { "general": 7.15, "senior": 7.65 },
+      "3-years": { "general": 7.15, "senior": 7.65 },
+      "5-years": { "general": 6.50, "senior": 7.00 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "idfc-first-bank",
+    "name": "IDFC First Bank",
+    "fullName": "IDFC First Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.50, "senior": 7.00 },
+      "1-year": { "general": 6.90, "senior": 7.40 },
+      "2-years": { "general": 7.00, "senior": 7.50 },
+      "3-years": { "general": 7.00, "senior": 7.50 },
+      "5-years": { "general": 7.00, "senior": 7.50 }
+    },
+    "minDeposit": 10000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "0.50% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "south-indian-bank",
+    "name": "South Indian Bank",
+    "fullName": "South Indian Bank",
+    "type": "bank",
+    "fd": {
+      "6-months": { "general": 6.60, "senior": 7.10 },
+      "1-year": { "general": 7.00, "senior": 7.50 },
+      "2-years": { "general": 6.90, "senior": 7.40 },
+      "3-years": { "general": 6.75, "senior": 7.25 },
+      "5-years": { "general": 6.25, "senior": 6.75 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "1% penalty on applicable rate",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "post-office",
+    "name": "Post Office",
+    "fullName": "India Post Office",
+    "type": "govt",
+    "fd": {
+      "1-year": { "general": 6.90, "senior": 6.90 },
+      "2-years": { "general": 7.00, "senior": 7.00 },
+      "3-years": { "general": 7.10, "senior": 7.10 },
+      "5-years": { "general": 7.50, "senior": 7.50 }
+    },
+    "minDeposit": 1000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "Allowed after 6 months with penalty",
+    "specialScheme": "5-year Tax Saver FD - 7.50% (Sec 80C benefit)"
+  },
+  {
+    "slug": "bajaj-finserv",
+    "name": "Bajaj Finserv",
+    "fullName": "Bajaj Finance Limited",
+    "type": "nbfc",
+    "fd": {
+      "1-year": { "general": 7.40, "senior": 7.65 },
+      "2-years": { "general": 7.45, "senior": 7.70 },
+      "3-years": { "general": 7.55, "senior": 7.80 },
+      "5-years": { "general": 7.40, "senior": 7.65 }
+    },
+    "minDeposit": 15000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "Allowed after 3 months with penalty",
+    "specialScheme": "Special tenure 42 months - 7.60%"
+  },
+  {
+    "slug": "mahindra-finance",
+    "name": "Mahindra Finance",
+    "fullName": "Mahindra & Mahindra Financial Services",
+    "type": "nbfc",
+    "fd": {
+      "1-year": { "general": 7.50, "senior": 7.75 },
+      "2-years": { "general": 7.60, "senior": 7.85 },
+      "3-years": { "general": 7.65, "senior": 7.90 },
+      "5-years": { "general": 7.55, "senior": 7.80 }
+    },
+    "minDeposit": 5000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "Allowed after 3 months with penalty",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "shriram-finance",
+    "name": "Shriram Finance",
+    "fullName": "Shriram Finance Limited",
+    "type": "nbfc",
+    "fd": {
+      "1-year": { "general": 7.50, "senior": 7.75 },
+      "2-years": { "general": 7.68, "senior": 7.93 },
+      "3-years": { "general": 7.71, "senior": 7.96 },
+      "5-years": { "general": 7.61, "senior": 7.86 }
+    },
+    "minDeposit": 5000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "Allowed after 3 months with penalty",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "pnb-housing",
+    "name": "PNB Housing",
+    "fullName": "PNB Housing Finance",
+    "type": "nbfc",
+    "fd": {
+      "1-year": { "general": 7.25, "senior": 7.50 },
+      "2-years": { "general": 7.35, "senior": 7.60 },
+      "3-years": { "general": 7.35, "senior": 7.60 },
+      "5-years": { "general": 7.25, "senior": 7.50 }
+    },
+    "minDeposit": 10000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "Allowed after 3 months with penalty",
+    "specialScheme": "None"
+  },
+  {
+    "slug": "lic-housing",
+    "name": "LIC Housing",
+    "fullName": "LIC Housing Finance",
+    "type": "nbfc",
+    "fd": {
+      "1-year": { "general": 7.10, "senior": 7.35 },
+      "2-years": { "general": 7.15, "senior": 7.40 },
+      "3-years": { "general": 7.15, "senior": 7.40 },
+      "5-years": { "general": 7.00, "senior": 7.25 }
+    },
+    "minDeposit": 10000,
+    "compounding": "Quarterly",
+    "prematureWithdrawal": "Allowed after 3 months with penalty",
+    "specialScheme": "None"
+  }
+]

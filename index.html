@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator Online | Fixed Deposit Calculator India - FD Batao</title>
+    <meta name="description" content="Calculate FD maturity amount instantly. Free Fixed Deposit calculator with interest rates from SBI, HDFC, ICICI, Post Office & more. Compare FD rates across all banks.">
+    <meta name="keywords" content="fd calculator, fixed deposit calculator, fd interest rate calculator, fd maturity calculator, sbi fd calculator, hdfc fd calculator, fd rates 2026">
+    <link rel="canonical" href="https://fdbatao.com/">
+    <meta property="og:title" content="FD Calculator Online - FD Batao">
+    <meta property="og:description" content="Calculate your Fixed Deposit maturity amount instantly. Free calculator with rates from all major banks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fdbatao.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8235932614579966" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "FD Batao - FD Calculator",
+        "url": "https://fdbatao.com",
+        "description": "Free online Fixed Deposit calculator for all Indian banks with maturity amount, interest earned and year-wise growth schedule",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+        }
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #0a0a0b;
+            --card: #141416;
+            --card-hover: #1a1a1e;
+            --border: #2a2a2e;
+            --text: #e8e8ec;
+            --text-muted: #8a8a94;
+            --accent: #f97316;
+            --accent-dim: #f9731620;
+            --green: #22c55e;
+            --red: #ef4444;
+            --input-bg: #1a1a1e;
+            --blue: #38bdf8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            z-index: 100;
+            backdrop-filter: blur(20px);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--text);
+        }
+
+        .logo span { color: var(--accent); }
+
+        .badge {
+            background: var(--accent-dim);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span { color: var(--accent); }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 17px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .trust-bar {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .trust-item .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .panel {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .panel-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .panel-title .num {
+            background: var(--accent);
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin: 24px 0 12px;
+        }
+
+        .section-label:first-of-type { margin-top: 0; }
+
+        .form-group { margin-bottom: 16px; }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            background: var(--input-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .input-with-unit { position: relative; }
+        .input-with-unit .unit {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 14px;
+            pointer-events: none;
+        }
+        .input-with-unit .unit-right { left: auto; right: 14px; }
+        .input-with-unit input { padding-left: 30px; }
+        .input-with-unit .input-rate { padding-left: 14px; padding-right: 30px; }
+
+        .tenure-row { display: flex; gap: 8px; }
+        .tenure-row input { flex: 1; }
+        .tenure-toggle {
+            display: flex;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .toggle-btn {
+            padding: 10px 14px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .toggle-btn.active { background: var(--accent); color: #000; font-weight: 600; }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+        .btn-calculate {
+            width: 100%;
+            padding: 16px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+        .btn-calculate:hover { opacity: 0.9; transform: scale(0.995); }
+        .btn-calculate:active { transform: scale(0.98); }
+
+        .result-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+        .result-card {
+            background: var(--input-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .result-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+        .result-card .value { font-size: 18px; font-weight: 700; color: var(--text); }
+        .result-card.highlight { border-color: var(--accent); background: var(--accent-dim); }
+        .result-card.highlight .value { color: var(--accent); }
+
+        .chart-section {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            padding: 20px;
+            background: var(--input-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+        .chart-container { position: relative; width: 160px; height: 160px; flex-shrink: 0; }
+        .chart-container canvas { display: block; }
+        .chart-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+        .chart-center .total-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+        .chart-center .total-value { font-size: 14px; font-weight: 700; color: var(--text); }
+        .chart-legend { flex: 1; }
+        .legend-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; }
+        .legend-item + .legend-item { border-top: 1px solid var(--border); }
+        .legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+        .legend-info { flex: 1; }
+        .legend-info .legend-label { font-size: 12px; color: var(--text-muted); }
+        .legend-info .legend-value { font-size: 15px; font-weight: 600; color: var(--text); }
+        .legend-percent { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+
+        .table-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .table-title { font-size: 15px; font-weight: 600; }
+        .table-container { max-height: 400px; overflow-y: auto; border: 1px solid var(--border); border-radius: 10px; }
+        .amort-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .amort-table thead th { position: sticky; top: 0; background: var(--card); z-index: 1; }
+        .amort-table th { text-align: right; padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .amort-table th:first-child { text-align: left; }
+        .amort-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+        .amort-table td:first-child { text-align: left; color: var(--text-muted); }
+        .amort-table tbody tr:last-child td { border-bottom: none; }
+        .amort-table tbody tr:hover td { background: var(--input-bg); }
+
+        .btn-download {
+            width: 100%;
+            padding: 14px;
+            background: var(--green);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: opacity 0.2s;
+        }
+        .btn-download:hover { opacity: 0.85; }
+
+        /* Browse Section */
+        .browse-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 24px 60px;
+        }
+
+        .browse-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .browse-section h2 span { color: var(--accent); }
+
+        .browse-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .browse-card {
+            display: block;
+            padding: 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            text-decoration: none;
+            transition: border-color 0.2s, transform 0.1s;
+        }
+
+        .browse-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+        .browse-card .bc-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .browse-card .bc-rate {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .browse-card .bc-sub {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Tenure Section */
+        .tenure-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+        }
+
+        .tenure-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .tenure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .tenure-card {
+            display: block;
+            padding: 16px 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 500;
+            transition: border-color 0.2s;
+        }
+
+        .tenure-card:hover { border-color: var(--accent); }
+        .tenure-card .tc-sub { display: block; font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 24px 60px;
+        }
+        .faq-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            background: var(--card);
+        }
+        .faq-item h3 { font-size: 15px; margin-bottom: 8px; }
+        .faq-item p { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+
+        .table-container::-webkit-scrollbar { width: 6px; }
+        .table-container::-webkit-scrollbar-track { background: var(--card); border-radius: 3px; }
+        .table-container::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        @media (max-width: 900px) {
+            .main { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 32px; }
+            .result-cards { grid-template-columns: 1fr 1fr 1fr; }
+            .result-card .value { font-size: 15px; }
+            .chart-section { flex-direction: column; }
+            .chart-container { width: 140px; height: 140px; }
+        }
+
+        @media (max-width: 480px) {
+            .result-cards { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .panel { padding: 20px; }
+            .browse-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <div class="logo">FD <span>Batao</span></div>
+        <div class="badge">100% Free &middot; Instant Results</div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Calculate Your <span>Fixed Deposit</span> Returns Instantly</h1>
+    <p>Free FD calculator with maturity amount, interest earned & year-wise growth. Compare rates from 25+ banks.</p>
+    <div class="trust-bar">
+        <div class="trust-item"><div class="dot"></div> 25+ Banks & NBFCs</div>
+        <div class="trust-item"><div class="dot"></div> Instant Results</div>
+        <div class="trust-item"><div class="dot"></div> PDF Download</div>
+    </div>
+</section>
+
+<!-- Ad: Below Hero -->
+<div style="max-width:1200px;margin:0 auto 24px;padding:0 24px;text-align:center;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8235932614579966" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="main">
+    <!-- Input Panel -->
+    <div>
+        <div class="panel">
+            <div class="panel-title"><div class="num">1</div> FD Details</div>
+
+            <div class="section-label">Deposit Parameters</div>
+
+            <div class="form-group">
+                <label>Deposit Amount (&#8377;)</label>
+                <div class="input-with-unit">
+                    <span class="unit">&#8377;</span>
+                    <input type="text" id="depositAmount" inputmode="numeric" placeholder="5,00,000" value="5,00,000">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Interest Rate (% per annum)</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="interestRate" class="input-rate" step="0.1" min="0" max="20" placeholder="7.0" value="7.0">
+                        <span class="unit unit-right">%</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Tenure</label>
+                    <div class="tenure-row">
+                        <input type="number" id="tenure" min="1" step="1" placeholder="5" value="5">
+                        <div class="tenure-toggle" id="tenureToggle">
+                            <button class="toggle-btn active" data-unit="years">Yr</button>
+                            <button class="toggle-btn" data-unit="months">Mo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Compounding Frequency</label>
+                <select id="compounding">
+                    <option value="4" selected>Quarterly (Most Common)</option>
+                    <option value="12">Monthly</option>
+                    <option value="2">Half-Yearly</option>
+                    <option value="1">Annually</option>
+                </select>
+            </div>
+
+            <button class="btn-calculate" onclick="calculate()">Calculate Maturity &rarr;</button>
+        </div>
+    </div>
+
+    <!-- Results Panel -->
+    <div>
+        <div class="panel" id="resultsPanel">
+            <div class="panel-title"><div class="num">2</div> Maturity Breakdown</div>
+
+            <div class="result-cards">
+                <div class="result-card highlight">
+                    <div class="label">Maturity Amount</div>
+                    <div class="value" id="maturityValue">-</div>
+                </div>
+                <div class="result-card">
+                    <div class="label">Interest Earned</div>
+                    <div class="value" id="interestValue">-</div>
+                </div>
+                <div class="result-card">
+                    <div class="label">Deposit Amount</div>
+                    <div class="value" id="depositValue">-</div>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                    <div class="chart-center">
+                        <div class="total-label">Maturity</div>
+                        <div class="total-value" id="chartTotal">-</div>
+                    </div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background:var(--accent)"></div>
+                        <div class="legend-info">
+                            <div class="legend-label">Deposit Amount</div>
+                            <div class="legend-value" id="legendPrincipal">-</div>
+                        </div>
+                        <div class="legend-percent" id="legendPrincipalPct">-</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background:var(--green)"></div>
+                        <div class="legend-info">
+                            <div class="legend-label">Interest Earned</div>
+                            <div class="legend-value" id="legendInterest">-</div>
+                        </div>
+                        <div class="legend-percent" id="legendInterestPct">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-header">
+                <div class="table-title">Year-wise Growth</div>
+            </div>
+            <div class="table-container">
+                <table class="amort-table">
+                    <thead id="tableHead"><tr><th>Year</th><th>Deposit</th><th>Interest Earned</th><th>Maturity Value</th></tr></thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+            <button class="btn-download" onclick="downloadPDF()">&darr; Download FD Schedule (PDF)</button>
+        </div>
+    </div>
+</div>
+
+<!-- Browse Banks -->
+<section class="browse-section">
+    <h2>Compare <span>FD Rates</span> Across Banks</h2>
+    <div class="browse-grid">
+        <a class="browse-card" href="/sbi-fd-calculator">
+            <div class="bc-name">SBI</div>
+            <div class="bc-rate">Up to 7.00%</div>
+            <div class="bc-sub">State Bank of India &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/hdfc-bank-fd-calculator">
+            <div class="bc-name">HDFC Bank</div>
+            <div class="bc-rate">Up to 7.00%</div>
+            <div class="bc-sub">HDFC Bank &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/icici-bank-fd-calculator">
+            <div class="bc-name">ICICI Bank</div>
+            <div class="bc-rate">Up to 7.00%</div>
+            <div class="bc-sub">ICICI Bank &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/axis-bank-fd-calculator">
+            <div class="bc-name">Axis Bank</div>
+            <div class="bc-rate">Up to 7.10%</div>
+            <div class="bc-sub">Axis Bank &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/kotak-mahindra-bank-fd-calculator">
+            <div class="bc-name">Kotak Mahindra Bank</div>
+            <div class="bc-rate">Up to 7.10%</div>
+            <div class="bc-sub">Kotak Mahindra Bank &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/post-office-fd-calculator">
+            <div class="bc-name">Post Office</div>
+            <div class="bc-rate">Up to 7.50%</div>
+            <div class="bc-sub">India Post Office &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/bajaj-finserv-fd-calculator">
+            <div class="bc-name">Bajaj Finserv</div>
+            <div class="bc-rate">Up to 7.55%</div>
+            <div class="bc-sub">Bajaj Finance &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/shriram-finance-fd-calculator">
+            <div class="bc-name">Shriram Finance</div>
+            <div class="bc-rate">Up to 7.71%</div>
+            <div class="bc-sub">Shriram Finance &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/indusind-bank-fd-calculator">
+            <div class="bc-name">IndusInd Bank</div>
+            <div class="bc-rate">Up to 7.25%</div>
+            <div class="bc-sub">IndusInd Bank &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/yes-bank-fd-calculator">
+            <div class="bc-name">Yes Bank</div>
+            <div class="bc-rate">Up to 7.25%</div>
+            <div class="bc-sub">Yes Bank &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/bandhan-bank-fd-calculator">
+            <div class="bc-name">Bandhan Bank</div>
+            <div class="bc-rate">Up to 7.25%</div>
+            <div class="bc-sub">Bandhan Bank &middot; FD Calculator</div>
+        </a>
+        <a class="browse-card" href="/mahindra-finance-fd-calculator">
+            <div class="bc-name">Mahindra Finance</div>
+            <div class="bc-rate">Up to 7.65%</div>
+            <div class="bc-sub">Mahindra Finance &middot; FD Calculator</div>
+        </a>
+    </div>
+</section>
+
+<!-- Browse by Tenure -->
+<section class="tenure-section">
+    <h2>FD Rates by Tenure</h2>
+    <div class="tenure-grid">
+        <a class="tenure-card" href="/6-months-fd-rates">6 Months FD Rates<span class="tc-sub">Compare rates across all banks</span></a>
+        <a class="tenure-card" href="/1-year-fd-rates">1 Year FD Rates<span class="tc-sub">Most popular FD tenure</span></a>
+        <a class="tenure-card" href="/2-years-fd-rates">2 Years FD Rates<span class="tc-sub">Medium-term FD rates</span></a>
+        <a class="tenure-card" href="/3-years-fd-rates">3 Years FD Rates<span class="tc-sub">Long-term FD comparison</span></a>
+        <a class="tenure-card" href="/5-years-fd-rates">5 Years FD Rates<span class="tc-sub">Tax-saver FD (Sec 80C)</span></a>
+    </div>
+</section>
+
+<!-- Ad: Above FAQ -->
+<div style="max-width:800px;margin:0 auto;padding:20px 24px;text-align:center;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8235932614579966" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3>What is a Fixed Deposit (FD)?</h3>
+        <p>A Fixed Deposit (FD) is a financial instrument provided by banks and NBFCs where you deposit a lump sum amount for a fixed period at a predetermined interest rate. FDs are one of the safest investment options in India with guaranteed returns.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How is FD maturity amount calculated?</h3>
+        <p>FD maturity is calculated using compound interest formula: M = P &times; (1 + r/n)^(n&times;t), where P is principal, r is annual rate, n is compounding frequency (usually 4 for quarterly), and t is time in years. Our calculator uses this standard formula.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Which bank offers the highest FD rate in India?</h3>
+        <p>FD rates vary across banks and change frequently. Generally, NBFCs like Bajaj Finserv, Shriram Finance, and Mahindra Finance offer higher rates (7.5-8%). Among banks, small finance banks and private banks like IndusInd, Yes Bank, and Bandhan Bank offer competitive rates.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Is FD interest taxable?</h3>
+        <p>Yes, FD interest is fully taxable as per your income tax slab. Banks deduct TDS at 10% if annual interest exceeds &#8377;40,000 (&#8377;50,000 for senior citizens). You can submit Form 15G/15H to avoid TDS if total income is below the taxable limit.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What is the DICGC insurance on FD?</h3>
+        <p>DICGC (Deposit Insurance and Credit Guarantee Corporation) insures bank deposits up to &#8377;5 Lakh per depositor per bank. This covers both principal and interest. Note: NBFC FDs are NOT covered by DICGC insurance.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Built by TUD Innovations Pvt Ltd. FD maturity calculations use standard compound interest (quarterly compounding). Actual returns may vary based on bank-specific terms.</p>
+    <p style="margin-top:8px"><a href="/privacy">Privacy Policy</a></p>
+</footer>
+
+<script>
+let currentUnit = 'years';
+let growthData = [];
+
+function formatCurrency(num) {
+    return new Intl.NumberFormat('en-IN').format(Math.round(num));
+}
+
+function formatCurrencyShort(num) {
+    num = Math.round(num);
+    if (num >= 10000000) return '\u20B9' + (num / 10000000).toFixed(2) + ' Cr';
+    if (num >= 100000) return '\u20B9' + (num / 100000).toFixed(2) + ' L';
+    return '\u20B9' + formatCurrency(num);
+}
+
+function getRawNumber(id) {
+    return parseInt(document.getElementById(id).value.replace(/[^0-9]/g, '')) || 0;
+}
+
+function formatAmountInput() {
+    var input = document.getElementById('depositAmount');
+    var raw = input.value.replace(/[^0-9]/g, '');
+    if (raw) input.value = new Intl.NumberFormat('en-IN').format(parseInt(raw));
+    calculate();
+}
+
+function calculateMaturity(principal, annualRate, years, compFreq) {
+    if (principal <= 0 || years <= 0) return principal;
+    if (annualRate === 0) return principal;
+    var n = compFreq || 4;
+    var r = annualRate / 100;
+    return Math.round(principal * Math.pow(1 + r / n, n * years));
+}
+
+function generateGrowthSchedule(principal, annualRate, totalYears, compFreq) {
+    var n = compFreq || 4;
+    var schedule = [];
+    for (var y = 1; y <= Math.ceil(totalYears); y++) {
+        var effectiveYears = Math.min(y, totalYears);
+        var maturity = calculateMaturity(principal, annualRate, effectiveYears, n);
+        var interest = maturity - principal;
+        schedule.push({ year: y, maturity: maturity, interest: interest, principal: principal });
+    }
+    return schedule;
+}
+
+function drawPieChart(principal, interest) {
+    var canvas = document.getElementById('pieChart');
+    if (!canvas) return;
+    var container = canvas.parentElement;
+    var size = container.offsetWidth;
+    canvas.width = size * 2; canvas.height = size * 2;
+    canvas.style.width = size + 'px'; canvas.style.height = size + 'px';
+    var ctx = canvas.getContext('2d');
+    ctx.scale(2, 2);
+    var cx = size / 2, cy = size / 2, outerR = size / 2 - 4, innerR = outerR * 0.62;
+    var total = principal + interest;
+    if (total <= 0) return;
+    var principalAngle = (principal / total) * Math.PI * 2, gap = 0.03;
+    ctx.beginPath();
+    ctx.arc(cx, cy, outerR, -Math.PI / 2 + gap / 2, -Math.PI / 2 + principalAngle - gap / 2);
+    ctx.arc(cx, cy, innerR, -Math.PI / 2 + principalAngle - gap / 2, -Math.PI / 2 + gap / 2, true);
+    ctx.closePath(); ctx.fillStyle = '#f97316'; ctx.fill();
+    ctx.beginPath();
+    ctx.arc(cx, cy, outerR, -Math.PI / 2 + principalAngle + gap / 2, -Math.PI / 2 + Math.PI * 2 - gap / 2);
+    ctx.arc(cx, cy, innerR, -Math.PI / 2 + Math.PI * 2 - gap / 2, -Math.PI / 2 + principalAngle + gap / 2, true);
+    ctx.closePath(); ctx.fillStyle = '#22c55e'; ctx.fill();
+}
+
+function renderTable() {
+    var head = document.getElementById('tableHead');
+    var body = document.getElementById('tableBody');
+    head.innerHTML = '<tr><th>Year</th><th>Deposit</th><th>Interest Earned</th><th>Maturity Value</th></tr>';
+    body.innerHTML = growthData.map(function(r) {
+        return '<tr><td>Year ' + r.year + '</td><td>\u20B9' + formatCurrency(r.principal) + '</td><td>\u20B9' + formatCurrency(r.interest) + '</td><td>\u20B9' + formatCurrency(r.maturity) + '</td></tr>';
+    }).join('');
+}
+
+function calculate() {
+    var principal = getRawNumber('depositAmount');
+    var rate = parseFloat(document.getElementById('interestRate').value) || 0;
+    var tenureVal = parseFloat(document.getElementById('tenure').value) || 0;
+    var compFreq = parseInt(document.getElementById('compounding').value) || 4;
+    var years = currentUnit === 'years' ? tenureVal : tenureVal / 12;
+    if (principal <= 0 || years <= 0) return;
+
+    var maturity = calculateMaturity(principal, rate, years, compFreq);
+    var interest = maturity - principal;
+
+    document.getElementById('maturityValue').textContent = formatCurrencyShort(maturity);
+    document.getElementById('interestValue').textContent = formatCurrencyShort(interest);
+    document.getElementById('depositValue').textContent = formatCurrencyShort(principal);
+
+    drawPieChart(principal, interest);
+    document.getElementById('chartTotal').textContent = formatCurrencyShort(maturity);
+
+    var principalPct = Math.round(principal / maturity * 100);
+    document.getElementById('legendPrincipal').textContent = '\u20B9' + formatCurrency(principal);
+    document.getElementById('legendInterest').textContent = '\u20B9' + formatCurrency(interest);
+    document.getElementById('legendPrincipalPct').textContent = principalPct + '%';
+    document.getElementById('legendInterestPct').textContent = (100 - principalPct) + '%';
+
+    growthData = generateGrowthSchedule(principal, rate, years, compFreq);
+    renderTable();
+}
+
+function downloadPDF() {
+    if (growthData.length === 0) return;
+    var principal = getRawNumber('depositAmount');
+    var rate = parseFloat(document.getElementById('interestRate').value) || 0;
+    var tenureVal = parseFloat(document.getElementById('tenure').value) || 0;
+    var compFreq = parseInt(document.getElementById('compounding').value) || 4;
+    var years = currentUnit === 'years' ? tenureVal : tenureVal / 12;
+    var maturity = calculateMaturity(principal, rate, years, compFreq);
+    var interest = maturity - principal;
+    var compLabels = {1:'Annually',2:'Half-Yearly',4:'Quarterly',12:'Monthly'};
+    var tenureStr = currentUnit === 'years' ? tenureVal + ' Years' : tenureVal + ' Months';
+
+    var pw = window.open('', '_blank');
+    pw.document.write('<!DOCTYPE html><html><head><title>FD Maturity Schedule - FD Batao</title><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>body{font-family:\'Outfit\',sans-serif;color:#1a1a1a;line-height:1.6;padding:40px 50px;max-width:900px;margin:0 auto;font-size:13px}h1{font-family:\'Playfair Display\',serif;font-size:22px;margin-bottom:4px}.subtitle{color:#666;font-size:13px;margin-bottom:24px}.summary{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:24px}.summary-item{background:#f7f7f7;padding:12px 16px;border-radius:8px}.summary-item .s-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#666}.summary-item .s-value{font-size:18px;font-weight:700;margin-top:2px}.summary-item.highlight .s-value{color:#f97316}table{width:100%;border-collapse:collapse;margin-top:16px}th{text-align:right;padding:8px 10px;border-bottom:2px solid #ddd;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#666}th:first-child{text-align:left}td{padding:8px 10px;border-bottom:1px solid #eee;text-align:right;font-variant-numeric:tabular-nums}td:first-child{text-align:left;color:#666}.footer{margin-top:32px;padding-top:16px;border-top:1px solid #ddd;font-size:11px;color:#999;text-align:center}@media print{body{padding:20px}.summary-item{background:#f7f7f7;-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body><h1>Fixed Deposit Maturity Schedule</h1><div class="subtitle">Generated on ' + new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}) + ' \u00B7 fdbatao.com</div><div class="summary"><div class="summary-item highlight"><div class="s-label">Maturity Amount</div><div class="s-value">\u20B9' + formatCurrency(maturity) + '</div></div><div class="summary-item"><div class="s-label">Deposit Amount</div><div class="s-value">\u20B9' + formatCurrency(principal) + '</div></div><div class="summary-item"><div class="s-label">Interest Earned</div><div class="s-value">\u20B9' + formatCurrency(interest) + '</div></div><div class="summary-item"><div class="s-label">Effective Return</div><div class="s-value">' + (principal > 0 ? ((interest/principal)*100).toFixed(1) : 0) + '%</div></div></div><div style="font-size:13px;color:#666;margin-bottom:8px">Interest Rate: ' + rate + '% p.a. \u00B7 Tenure: ' + tenureStr + ' \u00B7 Compounding: ' + (compLabels[compFreq]||'Quarterly') + '</div><h2 style="font-size:16px;margin-top:24px;margin-bottom:4px">Year-wise Growth</h2><table><thead><tr><th>Year</th><th>Deposit</th><th>Interest Earned</th><th>Maturity Value</th></tr></thead><tbody>' + growthData.map(function(r){return '<tr><td>Year '+r.year+'</td><td>\u20B9'+formatCurrency(r.principal)+'</td><td>\u20B9'+formatCurrency(r.interest)+'</td><td>\u20B9'+formatCurrency(r.maturity)+'</td></tr>';}).join('') + '</tbody></table><div class="footer">Generated by FD Batao (fdbatao.com) \u00B7 Built by TUD Innovations Pvt Ltd</div><script>setTimeout(function(){window.print();window.close()},500)<\/script></body></html>');
+    pw.document.close();
+}
+
+// Init
+document.getElementById('depositAmount').addEventListener('input', formatAmountInput);
+document.getElementById('interestRate').addEventListener('input', calculate);
+document.getElementById('tenure').addEventListener('input', calculate);
+document.getElementById('compounding').addEventListener('change', calculate);
+
+document.getElementById('tenureToggle').addEventListener('click', function(e) {
+    var btn = e.target.closest('.toggle-btn');
+    if (!btn) return;
+    this.querySelectorAll('.toggle-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    currentUnit = btn.dataset.unit;
+    calculate();
+});
+
+document.querySelector('.btn-calculate').addEventListener('click', function() {
+    if (window.innerWidth < 900) document.getElementById('resultsPanel').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Calculate on load
+calculate();
+</script>
+
+<!-- Batao/Banao Cross-Linking Widget -->
+<script src="https://gstbatao.com/batao-banao-widget.js"></script>
+</body>
+</html>
