@@ -1450,12 +1450,23 @@ ensureDir(DIST);
 
 // Copy static files
 console.log('\uD83D\uDCC4 Copying static files...');
-['index.html', 'privacy.html', 'ads.txt'].forEach(f => {
+['index.html', 'privacy.html', 'ads.txt', '855619084ca64ac9afe95c0b2b58894d.txt'].forEach(f => {
   const src = path.join(ROOT, f);
   if (fs.existsSync(src)) {
     fs.copyFileSync(src, path.join(DIST, f));
   }
 });
+
+// ─── Copy blog posts to dist ───────────────────────────────────────────────
+const blogSrcDir = path.join(ROOT, 'blog');
+if (fs.existsSync(blogSrcDir)) {
+  const blogDistDir = path.join(DIST, 'blog');
+  fs.mkdirSync(blogDistDir, { recursive: true });
+  fs.readdirSync(blogSrcDir).forEach(f => {
+    fs.copyFileSync(path.join(blogSrcDir, f), path.join(blogDistDir, f));
+  });
+  console.log('📝 Copied ' + fs.readdirSync(blogSrcDir).length + ' blog pages to dist/blog/');
+}
 
 // Generate tenure index pages
 console.log('\uD83D\uDCC5 Generating tenure index pages...');
@@ -1513,6 +1524,14 @@ console.log(`   \u2192 ${affiliateData.pages.length} affiliate pages`);
 
 // Generate sitemap and robots.txt
 console.log('\uD83D\uDDFA\uFE0F  Generating sitemap.xml and robots.txt...');
+// Add blog URLs to sitemap
+const blogDistCheck = path.join(DIST, 'blog');
+if (fs.existsSync(blogDistCheck)) {
+  fs.readdirSync(blogDistCheck).filter(f => f.endsWith('.html') && f !== 'index.html').forEach(f => {
+    allPages.push('blog/' + f.replace('.html', ''));
+  });
+}
+
 generateSitemap();
 generateRobotsTxt();
 
