@@ -53,8 +53,8 @@
             --border: #27272a;
             --text: #fafafa;
             --text-muted: #a1a1aa;
-            --accent: #f97316;
-            --accent-dim: #f9731620;
+            --accent: #E24B4A;
+            --accent-dim: #E24B4A20;
             --green: #34d399;
             --red: #f87171;
             --input-bg: #27272a;
@@ -750,7 +750,7 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-<footer class="footer">
+<footer style="border-top:3px solid #F2A623" class="footer">
     <div style="max-width:800px;margin:0 auto">
         <p style="margin-bottom:16px;font-size:12px;color:var(--text-muted)">FD maturity calculations use standard compound interest (quarterly compounding). Actual returns may vary based on bank-specific terms.</p>
         <p style="margin-bottom:12px;font-size:14px;color:var(--text)">Part of the <strong style="color:var(--accent)">TUDI</strong> Ecosystem</p>
@@ -827,7 +827,7 @@ function drawPieChart(principal, interest) {
     ctx.beginPath();
     ctx.arc(cx, cy, outerR, -Math.PI / 2 + gap / 2, -Math.PI / 2 + principalAngle - gap / 2);
     ctx.arc(cx, cy, innerR, -Math.PI / 2 + principalAngle - gap / 2, -Math.PI / 2 + gap / 2, true);
-    ctx.closePath(); ctx.fillStyle = '#f97316'; ctx.fill();
+    ctx.closePath(); ctx.fillStyle = '#E24B4A'; ctx.fill();
     ctx.beginPath();
     ctx.arc(cx, cy, outerR, -Math.PI / 2 + principalAngle + gap / 2, -Math.PI / 2 + Math.PI * 2 - gap / 2);
     ctx.arc(cx, cy, innerR, -Math.PI / 2 + Math.PI * 2 - gap / 2, -Math.PI / 2 + principalAngle + gap / 2, true);
